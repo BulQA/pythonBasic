@@ -203,3 +203,44 @@
 #     print("Сумма наоборот:", rev_total)
 #
 # main()
+
+# `````````````````Дз```````````````````````#
+
+# def count_numbers(number):
+#     count = 0
+#     while number > 0:
+#         count += 1
+#         number //= 10
+#     return count
+#
+# def change_number(number):
+#     num_digits = count_numbers(number)
+#     if num_digits == 1:
+#         return number
+#
+#     last_digit = number % 10
+#     first_digit = number // 10 ** (num_digits - 1)
+#     middle_part = number % 10 ** (num_digits - 1) // 10
+#
+#     new_number = last_digit * 10 ** (num_digits - 1) + middle_part * 10 + first_digit
+#     return new_number
+#
+# def main():
+#     first_n = int(input("Введите первое число: "))
+#     second_n = int(input("Введите второе число: "))
+#
+#     if count_numbers(first_n) < 3:
+#         print("Ошибка: в первом числе меньше трёх цифр.")
+#         return
+#     if count_numbers(second_n) < 4:
+#         print("Ошибка: во втором числе меньше четырёх цифр.")
+#         return
+#
+#     changed_first = change_number(first_n)
+#     changed_second = change_number(second_n)
+#
+#     print("Изменённое первое число:", changed_first)
+#     print("Изменённое второе число:", changed_second)
+#     print("Сумма чисел:", changed_first + changed_second)
+#
+# main()
