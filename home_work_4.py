@@ -244,3 +244,48 @@
 #     print("Сумма чисел:", changed_first + changed_second)
 #
 # main()
+
+# `````````````````Дз```````````````````````#
+
+# def pendulum():
+#     start = float(input("Введите начальную амплитуду: "))
+#     stop = float(input("Введите амплитуду остановки: "))
+#
+#     if start <= 0 or stop <= 0:
+#         print("Амплитуды должны быть положительными числами.")
+#     elif stop >= start:
+#         print("Амплитуда остановки должна быть меньше начальной.")
+#     else:
+#         count = 0
+#         while start > stop:
+#             start = start * 0.916  # уменьшение на 8.4%
+#             count = count + 1
+#         print("Маятник считается остановившимся через", count, "колебаний")
+#
+# pendulum()
+
+# `````````````````Дз```````````````````````#
+
+# def find_depth():
+#     epsilon = float(input("Введите максимально допустимый уровень опасности: "))
+#
+#     if epsilon <= 0:
+#         print("Допустимое отклонение должно быть положительным числом.")
+#     else:
+#         left = 0.0
+#         right = 4.0
+#
+#         while right - left > 0.0000001:
+#             mid = (left + right) / 2
+#             d = mid*mid*mid - 3*mid*mid - 12*mid + 10
+#
+#             if abs(d) <= epsilon:
+#                 break
+#             if d > 0:
+#                 left = mid
+#             else:
+#                 right = mid
+#
+#         print("Приблизительная глубина безопасной кладки:", round(mid, 8), "м")
+#
+# find_depth()
