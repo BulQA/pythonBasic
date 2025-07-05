@@ -1,0 +1,1 @@
+print('Congratulations, you opened me in Windows Power Shell!!!')
