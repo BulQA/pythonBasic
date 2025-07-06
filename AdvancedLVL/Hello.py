@@ -28,3 +28,4 @@ print('Congratulations, you opened me in Windows Power Shell!!!')
 # number = int(input('Number:'))
 # fac_sum = sum_factorials(number)
 # print('fac sum for', number, 'is', fac_sum)
+
