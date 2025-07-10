@@ -57,18 +57,18 @@
 
 # +++++++++++++++++++++++++++++++++++++++++++#
 
-monsters_count = int(input('Total monsters:'))
-mage_index = int(input('Caster top:'))
-
-monsters_dmg = []
-
-for monster in range(monsters_count):
-	print('DMG of', monster + 1 , 'monster:', end = ' ')
-	dmg = int(input())
-	monsters_dmg.append(dmg)
-
-for i in range(monsters_count):
-	if monsters_dmg[i] < 100 and i != mage_index - 1:
-		monsters_dmg[i] += monsters_dmg[mage_index - 1]
-
-print('Total DMG of monsters:', monsters_dmg)
+# monsters_count = int(input('Total monsters:'))
+# mage_index = int(input('Caster top:'))
+#
+# monsters_dmg = []
+#
+# for monster in range(monsters_count):
+# 	print('DMG of', monster + 1 , 'monster:', end = ' ')
+# 	dmg = int(input())
+# 	monsters_dmg.append(dmg)
+#
+# for i in range(monsters_count):
+# 	if monsters_dmg[i] < 100 and i != mage_index - 1:
+# 		monsters_dmg[i] += monsters_dmg[mage_index - 1]
+#
+# print('Total DMG of monsters:', monsters_dmg)
