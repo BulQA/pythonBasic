@@ -72,3 +72,74 @@
 # 		monsters_dmg[i] += monsters_dmg[mage_index - 1]
 #
 # print('Total DMG of monsters:', monsters_dmg)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# word = input("Insert you'r word:")
+# replace_num = int(input("Number of change:"))
+# replace_sym = input('Value:')
+#
+# new_word = ''
+#
+# count = 0
+# for sym in word:
+# 	count += 1
+# 	if replace_num != count:
+# 		new_word += sym
+# 	else:
+# 		new_word += replace_sym
+#
+# print('new_word')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# word = input("Insert you'r word:")
+# replace_num = int(input("Number of change:"))
+# replace_sym = input('Value:')
+#
+# sym_list = [word]
+#
+# for sym in word:
+# 	sym_list.append(sym)
+# sym_list[replace_num - 1] = replace_sym
+#
+# for i in sym_list:
+#
+# 	print(i, end = '')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# word = input("Insert you'r word:")
+# replace_num = int(input("Number of change:"))
+# replace_sym = input('Value:')
+#
+# sym_list = list(word)
+#
+# sym_list[replace_num - 1] = replace_sym
+#
+# for i in sym_list:
+#     print(i, end = '')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# words_list = []
+# counts = [0, 0, 0]
+#
+# for i in range(3):
+# 	print('Insert', i + 1, 'words:', end = ' ')
+# 	word = input()
+# 	words_list.append(word)
+#
+# text = input('Word in text:')
+# while text != "end":
+# 	for index in range(3):
+# 		if words_list[index] == text:
+# 			counts[index] += 1
+# 	text = input('Word in text:')
+#
+# print('\n Count words in text')
+#
+# for i in range(3):
+# 	print(words_list[i], ':', counts[i])
+
+# +++++++++++++++++++++++++++++++++++++++++++#
