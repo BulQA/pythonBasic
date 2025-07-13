@@ -43,10 +43,12 @@
 #
 # print(new_scores)
 
-# +++++++++++++++++++++++++++++++++++++++++++#
+#2.2 Индексы. Работа с элементами списка
 
 # scores = [8, 5, 10, 7, 6]
 # scores[1] *= 3
+#
+# print(scores)
 
 # +++++++++++++++++++++++++++++++++++++++++++#
 
@@ -73,7 +75,7 @@
 #
 # print('Total DMG of monsters:', monsters_dmg)
 
-# +++++++++++++++++++++++++++++++++++++++++++#
+#2.3 Списки работа со строками
 
 # word = input("Insert you'r word:")
 # replace_num = int(input("Number of change:"))
@@ -89,7 +91,7 @@
 # 	else:
 # 		new_word += replace_sym
 #
-# print('new_word')
+# print(new_word)
 
 # +++++++++++++++++++++++++++++++++++++++++++#
 
@@ -143,3 +145,27 @@
 # 	print(words_list[i], ':', counts[i])
 
 # +++++++++++++++++++++++++++++++++++++++++++#
+
+#2.4 Базовые возможности при работе со списками
+
+# def length(player_list):
+# 	players_count = 0
+# 	for _ in player_list:
+# 		players_count += 1
+# 	return players_count
+#
+# scores = [8, 5, 10, 7, 6]
+# scores[1] += length(scores)
+# scores.append(0)
+# scores[2] += length(scores)
+#
+# print(scores)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# scores = [8, 5, 10, 7, 6]
+# scores[1] += len(scores)
+# scores.append(0)
+# scores[2] += len(scores)
+#
+# print(scores)
