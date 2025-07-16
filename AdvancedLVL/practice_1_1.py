@@ -169,3 +169,73 @@
 # scores[2] += len(scores)
 #
 # print(scores)
+
+#3.2 Работа со списками методы insert, remove, index
+
+# langs = ['Python', 'Java', 'JS', 'SQL']
+# new_langs = []
+#
+# for i_lang in range(2):
+#     new_langs.append(langs[i_lang])
+# new_langs.append('C++')
+#
+# for i_lang in range(2, len(langs)):
+#     new_langs.append(langs[i_lang])
+# print(new_langs)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# lang = ['Python', 'Java', 'JS', 'SQL']
+# lang.insert(2, 'C++')
+#
+# print(langs)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# langs = ['Python', 'Java', 'JS', 'SQL']
+# user_lang = input("Number a new Language:")
+# i_lang = langs.index(user_lang)
+#
+# lang = ['Python', 'Java', 'JS', 'SQL']
+# langs.insert(i_lang + 1, 'C++')
+#
+# print(langs)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# def is_film_exist(movie, films_list):
+#     for i_movie in films_list:
+#         if i_movie == movie:
+#             return True
+#     return False
+#
+#
+# films = [
+#  'Титаник', 'Трансформеры', 'В поисках Немо'
+# ]
+#
+# my_list = []
+#
+# while True:
+#     print('\nYour TOP movies list:', my_list)
+#     new_movie = input('Movie name: ')
+#
+#     if is_film_exist(new_movie, films):
+#         print('Commands: add, delete, insert')
+#         command = input('Choose a command: ')
+#
+#         if command == 'add':
+#             my_list.append(new_movie)
+#
+#         if command == 'delete':
+#             if is_film_exist(new_movie, my_list):
+#                 my_list.remove(new_movie)
+#             else:
+#                 print('This movie is not in your TOP.')
+#
+#         if command == 'insert':
+#             index = int(input('What position in TOP?: '))
+#             my_list.insert(index - 1, new_movie)
+#     else:
+#         print('This movie does not exist on the site :(')
+
