@@ -239,3 +239,44 @@
 #     else:
 #         print('This movie does not exist on the site :(')
 
+#3.3 Работа с несколькими списками. Методы extend и count
+
+# my_list = ['a', 'b', 'c']
+# your_list = ['d', 'e', 'f']
+#
+# #my_list.append(your_list)
+#
+# #for i_elem in your_list:
+# #	my_list.append(i_elem)
+#
+# my_list.extend(your_list)
+#
+# my_list.extend('g')
+#
+# for i_elem in my_list:
+# 	print(my_list)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# pack = []
+# decode = []
+# bad_pacs = 0
+#
+# packs = int(input('Pack count:'))
+#
+# for i_pack_num in range(packs):
+# 	print('\nNumber of pack', i_pack_num + 1)
+# 	for i_bit in range(4):
+# 		print(i_bit + 1, 'bit:', end = ' ')
+# 		num = int(input())
+# 		pack.append(num)
+# 	if pack.count(-1) <= 1:
+# 		decode.extend(pack)
+# 	else:
+# 		print('To much error in pack.')
+# 		bad_pacs += 1
+# 	pack = []
+#
+# 	print('\nMessage:', decode)
+# 	print('Error count in messaage:', decode.count(-1))
+# 	print('Loss pack count:', bad_pacs)
