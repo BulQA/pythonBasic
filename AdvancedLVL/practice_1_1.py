@@ -280,3 +280,45 @@
 # 	print('\nMessage:', decode)
 # 	print('Error count in messaage:', decode.count(-1))
 # 	print('Loss pack count:', bad_pacs)
+
+#3.4 Вложенные списки
+
+# members = []
+#
+# n = int(input('Players count:'))
+#
+# for i_num in range(1, n + 1):
+#   members.append(i_num)
+#
+# members = list(range(1, n + 1))
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+# n = int(input('Players count:'))
+# members = []
+# num = 1
+#
+# for _ in range(n //3):
+# 	members.append(list(range(num, num + 3)))
+# 	num + 3
+#
+# print(members)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# words_list = [[' ', 0], [ ' ', 0], [' ', 0]]
+#
+# for i_num in range(3):
+# 	print('Input', i_num + 1, 'word:', end = ' ')
+# 	word = input()
+# 	words_list[i_num][0] = word
+#
+# text = input('Word in text:')
+# while text != 'end':
+# 	for index in range(3):
+# 		if words_list[index][0] == text:
+# 		    words_list[index][1] += 1
+# 	text = input('Word of text:')
+#
+# print('\n Calculate wonrs in text...')
+# for index in range(3):
+# 	print(words_list[index][0], ':', words_list[index][1])
