@@ -322,3 +322,35 @@
 # print('\n Calculate wonrs in text...')
 # for index in range(3):
 # 	print(words_list[index][0], ':', words_list[index][1])
+
+#4.2 List comprehensions
+
+# squares = []
+#
+# for x in range(10):
+# 	squares.append(x ** 2)
+#
+# print(squares)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# squares = [x ** 2 for x in range(10)]
+#
+# print(squares)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# def get_higher_price(percent, price):
+#     return round(price * (1 + percent / 100), 2)
+#
+# price = [1.01, 92.43, 54.66, 2.55, 9.99]
+#
+# first_percent = int(input('First year tax (%): '))
+# second_percent = int(input('Second year tax (%): '))
+#
+# prices_first = [get_higher_price(first_percent, i_price) for i_price in price]
+# prices_second = [get_higher_price(second_percent, i_price) for i_price in prices_first]
+#
+# print('Original total:', round(sum(price), 2))
+# print('After first year:', round(sum(prices_first), 2))
+# print('After second year:', round(sum(prices_second), 2))
