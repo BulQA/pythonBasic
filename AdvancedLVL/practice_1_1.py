@@ -354,3 +354,35 @@
 # print('Original total:', round(sum(price), 2))
 # print('After first year:', round(sum(prices_first), 2))
 # print('After second year:', round(sum(prices_second), 2))
+
+
+#4.3 List comprehensions с условиями. Модуль random
+
+# squares = []
+#
+# for x in range(10):
+# 	if x % 2 != 0:
+# 		squares.append(x ** 2)
+#
+# print(squares)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# squares_odds = [x ** 2 for x in range(10) if x %2 != 0]
+#
+# squares_cubes = [(x ** 2 if x %2 != 0 else x ** 3) for x in range(10) ]
+#
+# print(squares_odds)
+# print(squares_cubes)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# import random
+#
+# fst_squad = [random.randint(50, 80) for _ in range(10)]
+# sec_squad = [random.randint(30, 60) for _ in range(10)]
+# trd_squad = [('Die' if fst_squad[i_damage] + sec_squad[i_damage] > 100 else 'Alive') for i_damage in range(10)]
+#
+# print('First squad DMG:', fst_squad)
+# print('First squad DMG:', sec_squad)
+# print('Therd squad status:', trd_squad)
