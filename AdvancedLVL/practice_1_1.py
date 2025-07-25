@@ -411,22 +411,22 @@
 
 # +++++++++++++++++++++++++++++++++++++++++++#
 
-def is_palendrom(num_list):
-	reverse_list = num_list[::-1]
-	if num_list == reverse_list:
-		return True
-	else:
-		return False
-
-nums = [1, 2, 3, 4, 5]
-answer = []
-
-for i_nums in range(0, len(nums)):
-	if is_palendrom(nums[i_nums : len(nums)]):
-		answer = nums[:i_nums]
-		answer.reverse()
-		break
-
-print("Yo'r list:", nums)
-print("Exist number's of polendrom:", len(answer))
-print("List of exist digits:", answer)
+# def is_palendrom(num_list):
+# 	reverse_list = num_list[::-1]
+# 	if num_list == reverse_list:
+# 		return True
+# 	else:
+# 		return False
+#
+# nums = [1, 2, 3, 4, 5]
+# answer = []
+#
+# for i_nums in range(0, len(nums)):
+# 	if is_palendrom(nums[i_nums : len(nums)]):
+# 		answer = nums[:i_nums]
+# 		answer.reverse()
+# 		break
+#
+# print("Yo'r list:", nums)
+# print("Exist number's of polendrom:", len(answer))
+# print("List of exist digits:", answer)
