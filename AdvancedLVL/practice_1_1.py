@@ -386,3 +386,47 @@
 # print('First squad DMG:', fst_squad)
 # print('First squad DMG:', sec_squad)
 # print('Therd squad status:', trd_squad)
+
+#4.4 Срезы списков
+
+# nums = [x for x in range(1, 101) if x % 10 == 0]
+# new_nums = nums[:]
+# new_nums[3] == 0
+#
+# for i_elem in range(2, 8):
+# 	print(new_nums[i_elem], end = ' ')
+#
+# nums = [x for x in range(1, 101) if x % 10 == 0]
+# new_nums = nums[:]
+# new_nums[3] == 0
+#
+# print(new_nums [2:8])
+# print(new_nums [2:8:2])
+# print(new_nums [::-1])
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# nums = [x for x in range(1, 101) if x % 10 == 0]
+# nums[:3] = [1, 1, 1]
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+def is_palendrom(num_list):
+	reverse_list = num_list[::-1]
+	if num_list == reverse_list:
+		return True
+	else:
+		return False
+
+nums = [1, 2, 3, 4, 5]
+answer = []
+
+for i_nums in range(0, len(nums)):
+	if is_palendrom(nums[i_nums : len(nums)]):
+		answer = nums[:i_nums]
+		answer.reverse()
+		break
+
+print("Yo'r list:", nums)
+print("Exist number's of polendrom:", len(answer))
+print("List of exist digits:", answer)
