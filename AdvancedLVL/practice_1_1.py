@@ -430,3 +430,76 @@
 # print("Yo'r list:", nums)
 # print("Exist number's of polendrom:", len(answer))
 # print("List of exist digits:", answer)
+
+#4.5 Строки индексы и срезы
+
+# word = 'Привет'
+# result = []
+#
+# sym_lit = list(word)
+#
+# first_part = sym_lit[:len(sym_lit) // 2]
+# first_part = first_part[::-1]
+# print(first_part)
+#
+# sec_part = sym_lit[len(sym_lit) // 2:]
+# sec_part = sec_part[::-1]
+# print(sec_part)
+#
+# result.extended(first_part)
+# result.extended(sec_part)
+#
+# print(result)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# word = 'Привет'
+# result = []
+#
+# sym_lit = list(word)
+#
+# first_part = word[:len(sym_lit) // 2]
+# first_part = first_part[::-1]
+# print(first_part)
+#
+# sec_part = word[len(sym_lit) // 2:]
+# sec_part = sec_part[::-1]
+# print(sec_part)
+#
+# print(first_part + sec_part)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# word = 'Привет'
+#
+# first_part = word[:len(word) // 2]
+# print(first_part[::-1])
+#
+# sec_part = word[len(word) // 2:]
+# print(sec_part[::-1])
+#
+# print(first_part[::-1] + sec_part[::-1])
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# sqr = [x ** 2 for x in range(10)]
+#
+# sqr = [x ** 2 for x in range(10) if x % 2 == 0]
+#
+# sqr = [x ** 2 x % 2 == 0 else x ** 3
+#                   for x in range(10)]
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# nums[:6]
+# nums[6:]
+# nums[::6]
+# nums[::-1]
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# word = 'World'
+#
+# word[2] = '#' - ошибка
+# sym = word[2]
+# sym = word[1:5]
