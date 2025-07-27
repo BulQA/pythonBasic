@@ -103,3 +103,39 @@
 # print("Yo'r list:", nums)
 # print("Exist number's of polendrom:", len(answer))
 # print("List of exist digits:", answer)
+
+# `````````````````Дз```````````````````````#
+
+# my_lsit = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# output = [digit for digit in my_lsit]
+#
+# print(output)
+
+# `````````````````Дз```````````````````````#
+
+# my_lsit = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+#
+# output = [digit for each_list in my_lsit for digit in each_list]
+#
+# print(output)
+
+# `````````````````Дз```````````````````````#
+
+# def caesar_cipher(string, user_shift):
+#     alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+#     new_str = ''
+#     for sym in string:
+#         if sym == ' ':
+#             new_str += ' '
+#         elif sym in alphabet:
+#             index = (alphabet.index(sym) + user_shift) % len(alphabet)
+#             new_str += alphabet[index]
+#         else:
+#             new_str += sym  # чтобы сохранить знаки препинания и т.п.
+#     return new_str
+#
+# input_str = input('Input string: ')
+# shift = int(input('Input shift: '))
+#
+# output_str = caesar_cipher(input_str.lower(), shift)
+# print('Your new string is:', output_str)
