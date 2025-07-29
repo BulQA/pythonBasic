@@ -35,3 +35,67 @@
 #
 # for i_name in names_list:
 #     print(gartes_template.format(name=i_name))
+
+
+#5.3 Методы строк split и join
+
+# words_list = []
+#
+# while True:
+#     word = input('Input word:')
+#     if word != 'end':
+#         words_list.append(word)
+#     else:
+#         break
+#
+# print(words_list)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# text = input('Input yor text:')
+# word_list = text.split()
+#
+# print(word_list)
+#
+# new_text = ''
+#
+# for word in word_list:
+#     new_text += '---' + word
+#
+# print(new_text[3:])
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# text = input('Input yor text:')
+# word_list = text.split()
+#
+# print(word_list)
+#
+# new_text = '---'.join(word_list)
+#
+# print(new_text)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# while True:
+#     grats_template = input('Input your template like "Hello {name} and {age}": ')
+#     if "{name}" in grats_template and "{age}" in grats_template:
+#         break
+#     print('Error: you must include "{name}" and "{age}" in the template.')
+#
+# names_list = input('Names list separated by ", ": ').split(', ')
+# ages_str = input("Ages list separated by spaces: ")
+# ages = [int(i_number) for i_number in ages_str.split()]
+#
+# if len(names_list) != len(ages):
+#     print("Error: count of names and ages must match!")
+#     exit()
+#
+# people = [
+#     grats_template.format(name=names_list[i], age=ages[i])
+#     for i in range(len(names_list))
+# ]
+#
+# people_str = '\n'.join(people)
+# print('\nGrats:\n', people_str)
+
