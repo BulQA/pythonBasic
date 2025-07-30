@@ -99,3 +99,40 @@
 # people_str = '\n'.join(people)
 # print('\nGrats:\n', people_str)
 
+#5.4 Методы строк startswith, endswith, upper, lower
+
+# user_name = input('')
+# file_name = input('')
+#
+# path = 'C:/{user}/docs/folder/{new_file}'.format(
+#     user = user_name,
+#     new_file = file_name
+# )
+#
+# if path[-4:] == '.txt':
+#         print('Path:', path)
+# else:
+#     print('Ivalid file format')
+#
+# if not path.endswit('.txt'):
+#     print('Ivalid file format')
+# elif not path.startswith('C:/'):
+#     print('Disc path error')
+# else:
+#     print('Path:', path)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# word_list = []
+#
+# for i_num in range(3):
+#     print('input', i_num+1, 'word', end = ' ')
+#     word = input().lower()
+#     word = input().upper()
+#     word_list.append(word)
+#
+# text = input('Input text:').lower().split()
+#
+# print('\nWords Count in text')
+# for index in range(3):
+#     print(word_list[index]), ':', text.count(word_list[index])
