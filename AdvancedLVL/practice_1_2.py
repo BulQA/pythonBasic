@@ -147,3 +147,53 @@
 # print('Каждая деталь стоит {:.2f} рублей').format(price)
 # print('Цена увеличилась на {:.1%}').format(increase)
 # print('На складе {:.0e} деталей'.format(details_num))
+
+#6.1 Словарь основы
+
+# phonebook_lsit = [
+# ['Саша', +905103722715],
+# ['Маша', +905103722715],
+# ['Ваня', +905103722715]
+# ]
+#
+# name = input('Input name:')
+#
+# is_exist = False
+#
+# for i_person in phonebook_lsit:
+#     if i_person[0] == name:
+#         is_exist = True
+#         print(i_person[1])
+#         break
+# if not is_exist:
+#     print('Error: {} not found').format(name)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# phonebook_dict = {
+#     'Саша' : +905103722715,
+#     'Маша' : +905103722716,
+#     'Ваня' : +905103722717
+# }
+#
+# name = input('Input name:')
+#
+# if name in phonebook_dict:
+#     print(phonebook_dict[name])
+# else:
+#      print('Error: {} not found').format(name)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# student_str = input('Введите информацию (имя, фамилия, город, оценки через запятую):\n')
+#
+# student_info = [item.strip() for item in student_str.split(',')]
+#
+# student = dict()
+# student['имя'] = student_info[0]
+# student['фамилия'] = student_info[1]
+# student['город'] = student_info[2]
+# student['оценки'] = [int(grade) for grade in student_info[3:]]
+#
+# for key, value in student.items():
+#     print(f'{key} - {value}')
