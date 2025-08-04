@@ -197,3 +197,49 @@
 #
 # for key, value in student.items():
 #     print(f'{key} - {value}')
+
+
+#6.1 Словарь основы
+
+# def histogram(string):
+#     sym_dict = dict()
+#     for sym in string:
+#         if sym in sym_dict:
+#             sym_dict[sym] += 1
+#         else:
+#             sym_dict[sym] += 1
+#     return sym_dict
+#
+# text = input('input text:').lower()
+# hist = histogram(text)
+#
+# for i_sym in sorted(hist.keys()):
+#     print(i_sym, ':', hist[i_sym])
+#
+# print('Maximum freq:', max(hist.value()))
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# phonebook = {
+#     'Даша' : 123,
+#     'Ваня' : 456,
+#     'Миша' : 789
+# }
+#
+# other_phonebook = {
+#     'Лера' : 987 ,
+#     'Миша' : 654,
+#     'Сергей' : 321
+# }
+#
+# phonebook.update(other_phonebook)
+# phonebook.pop('Сергей')
+# phonebook['Саша'] = phonebook.pop('Лера')
+# print(phonebook)
+#
+# hist = {'a' : 1, 'b' : 2}
+# hist.keys() # Выводит ключи
+# hist.values # Выводит значение
+# hist.update(other_hist) # Обновляет словарь из другого словаря
+# hist['c'] = hist.pop('b') # Заменяет один ключ на дуказанный
+# hist.get() #Возвращает None при отсутствуещем значении
