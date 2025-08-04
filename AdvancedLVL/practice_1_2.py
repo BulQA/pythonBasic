@@ -199,7 +199,7 @@
 #     print(f'{key} - {value}')
 
 
-#6.1 Словарь основы
+#6.2 Методы словарей
 
 # def histogram(string):
 #     sym_dict = dict()
