@@ -218,7 +218,7 @@
 #
 # print('Maximum freq:', max(hist.value()))
 
-# +++++++++++++++++++++++++++++++++++++++++++#
+#+++++++++++++++++++++++++++++++++++++++++++#
 
 # phonebook = {
 #     'Даша' : 123,
@@ -243,3 +243,46 @@
 # hist.update(other_hist) # Обновляет словарь из другого словаря
 # hist['c'] = hist.pop('b') # Заменяет один ключ на дуказанный
 # hist.get() #Возвращает None при отсутствуещем значении
+
+#6.3 Вложенные словари и значения по умолчанию в get
+
+# data = dict()
+# data['server'] = {
+# 	'host' : '127.0.0.1',
+# 	'port' : '89'
+# }
+#
+# data['cfg'] = {
+# 	'ssh' : {
+# 		'acecess' : 'true',
+# 		'login' : 'Vasiliy',
+# 		'password' : 12345
+# 	}
+# }
+#
+# print(data['server']['port'])
+# data['cfg']['ssh']['login'] = 'Vladimir'
+#
+# for i_values in data.values():
+# 	for j_key in i_values:
+# 		print(j_key, i_values[j_key])
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# players_dict = {
+# 	1:{'name' : 'Masha', 'team' : 'C', 'status' : 'rest'},
+# 	2:{'name' : 'Alina', 'team' : 'B', 'status' : 'training'},
+# 	3:{'name' : 'Sasha', 'team' : 'A', 'status' : 'travel'},
+# 	4:{'name' : 'Andrei', 'team' : 'A', 'status' : 'rest'},
+# 	5:{'name' : 'Egor', 'team' : 'C', 'status' : 'training'},
+# 	6:{'name' : 'Max', 'team' : 'C', 'status' : 'rest'},
+# 	7:{'name' : 'Lena', 'team' : 'B', 'status' : 'rest'},
+# 	8:{'name' : 'Petya', 'team' : 'A', 'status' : 'travel'}
+# }
+#
+# teaam_a_members = [
+# 	player['name']
+# 	for player in players_dict.value
+# 		if player['team'] == 'A' and player['status'] == 'rest'
+# ]
+# print(teaam_a_members)
