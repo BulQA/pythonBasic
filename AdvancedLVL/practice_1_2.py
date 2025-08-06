@@ -280,9 +280,37 @@
 # 	8:{'name' : 'Petya', 'team' : 'A', 'status' : 'travel'}
 # }
 #
-# teaam_a_members = [
+# team_a_members = [
 # 	player['name']
 # 	for player in players_dict.value
 # 		if player['team'] == 'A' and player['status'] == 'rest'
 # ]
 # print(teaam_a_members)
+
+#6.4 Множества. Функция set
+
+# import random
+#
+# numer_list = [random.randint(1, 4) for _ in range(10)]
+# new_list = []
+#
+# for i_num in numer_list:
+# 	if i_num not in new_list:
+# 		new_list.append(i_num)
+#
+# print(numer_list)
+# print(new_list)
+#
+# unique = set(numer_list)
+# print(unique)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# nums_1 = {1, 2, 3, 4, 5}
+# nums_2 = {6, 7, 8, 3, 1}
+#
+# nums_1.intersection(nums_2) #'&' пересечение
+#
+# nums_1.union(nums_2) #'|' объеденение
+#
+# nums_1.difference(nums_2) #'-' разность
