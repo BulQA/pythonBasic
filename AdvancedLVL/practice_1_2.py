@@ -314,3 +314,44 @@
 # nums_1.union(nums_2) #'|' объеденение
 #
 # nums_1.difference(nums_2) #'-' разность
+
+#6.5 Генерация словарей
+
+# data = [
+# {'id' :1, 'user' : 'Эля'},
+# {'id' :2, 'user' : 'Миша'},
+# {'id' :3, 'user' : 'Эля'},
+# {'id' :3, 'user' : 'Саша'}
+# ]
+#
+# unique_data = []
+#
+# for i_dict in data:
+# 	data_exist = False
+# 	for uniq_dict in unique_data:
+# 		if uniq_dict['id'] == i_dict['id']:
+# 			data_exist = True
+# 			break
+# 	if not data_exist:
+# 		unique_data.append(i_dict)
+#
+# print(unique_data, '\n')
+#
+# unique_data_dict = {i_dict['id']: i_dict for i_dict in data}
+# print(unique_data_dict.values())
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# hist = dict
+# hist =['a'] = 10
+# hist.keys()
+# hist.values()
+# hist.update(new_hist)
+# hist.pop('a')
+# hist.get('a')
+# hist.get('a', 0)
+#
+# nums = [1, 2, 4, 3, 3, 5]
+# new_nums = set(nums)
+#
+# {i_dict['id']: for i_dict in data}
