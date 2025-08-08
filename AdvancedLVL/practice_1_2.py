@@ -355,3 +355,31 @@
 # new_nums = set(nums)
 #
 # {i_dict['id']: for i_dict in data}
+
+#7.2 Кортежи
+
+# def add_num(seq, number):
+# 	seq = list(seq)
+# 	for i_num in range(len(seq)):
+# 		seq[i_num] += number
+# 	return seq
+#
+# origin_tuple = (1, 2, 3, 3, 5)
+# changed_list = add_num(origin_tuple, 5)
+#
+# print(origin_tuple)
+# print(changed_list)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# user = 'Vova', 'Petrov', 25
+# name, surname, age = user
+#
+# print(user)
+# print(name, surname, age)
+
+
+
+
+
+
