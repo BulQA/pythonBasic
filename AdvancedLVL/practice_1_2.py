@@ -378,6 +378,42 @@
 # print(user)
 # print(name, surname, age)
 
+#7.3 Функция enumerate. Перебор нескольких значений
+
+# scores = [12, 23, 34, 45, 56, 67]
+#
+# for player, i_score in enumerate(scores):
+# 	print(player, i_score)
+#
+# syms_list = ['a', 'b', 'c']
+# gen = enumerate(syms_list)
+#
+# print(gen)
+
+#7.4 Перебор ключей и значений в словаре. Метод items
+
+# scores_dict = {
+# 	'Ваня' : 20,
+# 	'Паша' : 10,
+# 	'Галя' : 40,
+# 	'Маша' : 30
+# }
+#
+# for i_name in scores_dict:
+# 	print(i_name, scores_dict[i_name])
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# for i_name, i_score in enumerate(scores_dict):
+# 	print(i_name, i_score)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# for i_name, i_score in scores_dict.items():
+# 	print(i_name, i_score)
+
+
+
 
 
 
