@@ -412,7 +412,55 @@
 # for i_name, i_score in scores_dict.items():
 # 	print(i_name, i_score)
 
+#7.5 Составные ключи
 
+# phonebook_dict = {
+# 	('Ваня', 'Иванов') : 88006663636,
+# 	('Петя', 'Маров'): 88006663637,
+# 	('Ваня', 'Кислов') : 88006663638,
+# 	('Саша', 'Акунина') : 88006663639,
+# 	('Даша', 'Моржова') : 88006663640
+# }
+#
+# phonebook_dict[('Саша', 'Машко')] = 123456
+#
+# for i_person in phonebook_dict:
+# 	if 'Кислов' in i_person:
+# 		print(i_person[1], phonebook_dict[i_person])
+
+#7.6 Функция zip
+
+# names = ['Tom', 'Bob', 'Masha']
+# ages = [17, 20, 35]
+#
+# people = dict(zip(names, ages))
+# print(people)
+#
+# for person in people:
+# 	print(person)
+#
+# people_2 = {
+# 	i_name : i_age + 10
+# 	for i_name, i_age in zip(names, ages)
+# }
+#
+# print(people_2)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# nums_list= (1, 2, 3, 4, 5)
+# nums = tuple(nums_list)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# user = get_user() #('Boba', 'Ivanov', '32')
+# name, surname, age = user
+#
+# for index, value in enumerate(nums)
+#
+# for key, value in new_dict.items()
+#
+# people = dict(zip(names, ages))
 
 
 
