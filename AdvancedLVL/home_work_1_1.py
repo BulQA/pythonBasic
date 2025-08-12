@@ -211,7 +211,23 @@
 #3 шт, стоимость 3550 руб
 # Стул 105 шт, стоимость 10311 руб
 
+#8.1 Разбор домашнего задания
 
+# def shortest_seq_range(string, tuple_):
+#     return min(len(string), len(tuple_))
+#
+# sym_str = 'abc'
+# nums_tpl = (10, 20, 30, 40)
+#
+# pairs = ((sym_str[i_elem], nums_tpl[i_elem])
+#          for i_elem in range(shortest_seq_range(sym_str, nums_tpl)))
+#
+# pairs_list = list(pairs)
+#
+# for i_elem in pairs_list:
+#     print(i_elem)
+#
+# print(pairs_list)
 
 
 
