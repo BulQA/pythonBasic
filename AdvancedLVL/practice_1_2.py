@@ -462,6 +462,46 @@
 #
 # people = dict(zip(names, ages))
 
+#8.2 Рекурсия
+
+# def factorial(num):
+#     if num == 1:
+#         return 1
+#     return num * factorial(num - 1)
+#
+# num_fac = factorial(5)
+# print(num_fac)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# site = {
+#     'html': {
+#         'head': {},
+#         'title': 'Мой сайт',
+#         'body': {
+#             'h2': 'Здесь будет мой заголовок',
+#             'div': 'Тут, наверное, какой-то блок',
+#             'p': 'А вот здесь новый абзац'
+#         }
+#     }
+# }
+#
+# def find_key(struct, key):
+#     if key in struct:
+#         return struct[key]
+#     for sub_struct in struct.values():
+#         if isinstance(sub_struct, dict):
+#             result = find_key(sub_struct, key)
+#             if result is not None:  # проверка на None
+#                 return result
+#     return None
+#
+# user_key = input('Какой ключ ищем?: ')
+# value = find_key(site, user_key)
+# if value is not None:
+#     print(value)
+# else:
+#     print('Такой ключ отсутствует')
 
 
 
