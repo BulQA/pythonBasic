@@ -23,3 +23,25 @@
 # list
 # dict  # Изменяемые(mutable) типы данных
 # set
+
+#8.6 Именованные аргументы и значения по умолчанию
+
+# def ask_user(question,
+#              complaint="Incorrect input",
+#              retries=3):
+#
+#     while True:
+#         answer = input(question).lower()
+#         if answer == 'yes':
+#             return 1
+#         elif answer == 'no':
+#             return 0
+#         retries -= 1
+#         if retries == 0:
+#             print("No retries left.")
+#             break
+#         print(complaint)
+#         print("Retries left:", retries)
+#
+# ask_user("Are you sure? ", "Incorrect input, choice Yes or No")
+# ask_user("Are you sure? ", retries=2)
