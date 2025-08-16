@@ -45,3 +45,18 @@
 #
 # ask_user("Are you sure? ", "Incorrect input, choice Yes or No")
 # ask_user("Are you sure? ", retries=2)
+
+#8.7 Аргументы args и kwargs
+
+# def print_tax_document(tax, *args, **kwargs):
+#     price_sum = 0
+#     for i_price in args:
+#         price_sum += i_price * tax / 100
+#     print('Total sum and tax:', price_sum)
+#
+#     for i_info, i_value in kwargs.items():
+#         print(f'{i_info}: {i_value}')
+#
+# my_tax = int(input('Tax percent: '))
+#
+# print_tax_document(my_tax, 100, 200, 300, 400, 500, yer=1999, doc_type='report', id=147001)
