@@ -60,3 +60,44 @@
 # my_tax = int(input('Tax percent: '))
 #
 # print_tax_document(my_tax, 100, 200, 300, 400, 500, yer=1999, doc_type='report', id=147001)
+
+# 9.1 Модуль os генерация путей и метод listdir
+
+import os
+
+# folder_name = 'project'
+# file_name = 'file.txt'
+#
+# path = 'docs/{folder}/{file}'.format(
+#     folder=folder_name,
+#     file=file_name
+# )
+#
+# print(path)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# real_path = os.path.join('docs', folder_name, file_name)
+# print(real_path)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# abs_path = os.path.abspath(file_name)
+# print(abs_path)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# import os
+#
+# def print_dirs(project):
+#     print('Содержимое директории:', project)
+#     for i_elem in os.listdir(project):
+#         path = os.path.join(project, i_elem)
+#         print('  ', path)
+#
+#
+# project_list = ['PythonBasic', 'Practice']
+#
+# for i_project in project_list:
+#     path_to_project = os.path.abspath(os.path.join('..', '..', i_project))
+#     print_dirs(path_to_project)
