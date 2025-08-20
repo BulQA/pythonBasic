@@ -148,3 +148,69 @@ import os
 #     print("Файл не найден")
 #
 #     print('Файл не найден')
+
+#9.3 Базовые операции с файлами open, close, read
+
+# speaker_file = open('speaker_file.txt', 'r', encoding='utf-8')
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# data = speaker_file.read()
+# print(data)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+# for i_line in speaker_file:
+#     print(i_line, end='')
+#
+# speaker_file.close()
+
+#9.4 Метод write. Режимы записи
+
+# speaker_file = open('speaker_file.txt', 'r', encoding='utf-8')
+#
+# sym_count = []
+#
+# for i_line in speaker_file:
+#     print(i_line, end='')
+#     sym_count.append(str(len(i_line)))
+#
+# sym_count_str = '\n'.join(sym_count)
+# speaker_file.close()
+#
+# counts_file = open('sym_count.txt', 'w')
+# counts_file.write(sym_count_str)
+# counts_file.close()
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# import os
+#
+# def find_file(cur_path, file_name):
+#     print('Переходим в', cur_path)
+#
+#     for i_elem in os.listdir(cur_path):
+#         path = os.path.join(cur_path, i_elem)
+#         print('   смотрим', path)
+#
+#         if file_name == i_elem:
+#             return path
+#         elif os.path.isdir(path):
+#             print('Это директория')
+#             result = find_file(path, file_name)
+#             if result:
+#                 return result
+#     return None
+#
+# start_path = os.path.abspath(os.path.join('.', 'Skillbox'))
+# file_name = 'homework_1.py'
+#
+# file_path = find_file(start_path, file_name)
+#
+# # сохраняем результат в историю
+# with open('search_history.txt', 'a', encoding='utf-8') as history_file:
+#     if file_path:
+#         print('Абсолютный путь к файлу:', file_path)
+#         history_file.write(file_path + '\n')
+#     else:
+#         print('Файл не найден.')
+#         history_file.write('Файл не найден.\n')
