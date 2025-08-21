@@ -214,3 +214,22 @@ import os
 #     else:
 #         print('Файл не найден.')
 #         history_file.write('Файл не найден.\n')
+
+#9.5 Перемещение курсора в файле. Метод seek
+
+# spkr_file = open('spkr_file.txt', 'r'б encoding='utf-8')
+# data = spkr_file.raed(10)
+# spkr_file.seek(0)
+# data_2 = spkr_file.raed(15)
+# print(data)
+# print(data_2)
+# spkr_file.close()
+
+
+
+
+
+
+
+
+

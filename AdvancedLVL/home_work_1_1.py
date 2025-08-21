@@ -229,6 +229,56 @@
 #
 # print(pairs_list)
 
+#10.1 Разбор домашнего задания
+
+# import collections
+# import zipfile
+#
+# def unzip(archive):
+#     zfile = zipfile.ZipFile(archive, 'r')
+#     zfile.extractall()  # распаковываем всё
+#     zfile.close()
+#
+#
+# def collect_stats(file_name):
+#     result = {}
+#
+#     # если на входе .zip → распаковываем
+#     if file_name.endswith('.zip'):
+#         unzip(file_name)
+#         file_name = file_name[:-3] + 'txt'   # заменяем расширение
+#
+#     with open(file_name, 'r', encoding='utf-8') as text_file:
+#         for line in text_file:
+#             for char in line:
+#                 if char.isalpha():
+#                     char = char.lower()  # нормализуем буквы
+#                     result[char] = result.get(char, 0) + 1
+#
+#     return result
+#
+#
+# def print_stats(stats):
+#     print('+{:-^19}+'.format('+'))
+#     print('|{: ^9}|{: ^9}|'.format('буква', 'частота'))
+#     print('+{:-^19}+'.format('+'))
+#     for char, count in stats.items():
+#         print('|{: ^9}|{: ^9}|'.format(char, count))
+#     print('+{:-^19}+'.format('+'))
+#
+#
+# def sort_by_frequency(stats_dict):
+#     # OrderedDict в порядке убывания
+#     sorted_dict = collections.OrderedDict(
+#         sorted(stats_dict.items(), key=lambda item: item[1], reverse=True)
+#     )
+#     return sorted_dict
+#
+#
+# file_name = 'file_name.zip'   # или сразу .txt
+# stats = collect_stats(file_name)
+# stats = sort_by_frequency(stats)
+# print_stats(stats)
 
 
 
