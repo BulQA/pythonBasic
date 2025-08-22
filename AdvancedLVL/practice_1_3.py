@@ -12,7 +12,7 @@
 # try_to_change(my_list, number)
 # print(my_list, number)
 
-#+++++++++++++++++++++++++++++++++++++++++++#
+# +++++++++++++++++++++++++++++++++++++++++++#
 
 # int
 # float
@@ -24,7 +24,7 @@
 # dict  # Изменяемые(mutable) типы данных
 # set
 
-#8.6 Именованные аргументы и значения по умолчанию
+# 8.6 Именованные аргументы и значения по умолчанию
 
 # def ask_user(question,
 #              complaint="Incorrect input",
@@ -46,7 +46,7 @@
 # ask_user("Are you sure? ", "Incorrect input, choice Yes or No")
 # ask_user("Are you sure? ", retries=2)
 
-#8.7 Аргументы args и kwargs
+# 8.7 Аргументы args и kwargs
 
 # def print_tax_document(tax, *args, **kwargs):
 #     price_sum = 0
@@ -75,17 +75,17 @@ import os
 #
 # print(path)
 
-#+++++++++++++++++++++++++++++++++++++++++++#
+# +++++++++++++++++++++++++++++++++++++++++++#
 
 # real_path = os.path.join('docs', folder_name, file_name)
 # print(real_path)
 
-#+++++++++++++++++++++++++++++++++++++++++++#
+# +++++++++++++++++++++++++++++++++++++++++++#
 
 # abs_path = os.path.abspath(file_name)
 # print(abs_path)
 
-#+++++++++++++++++++++++++++++++++++++++++++#
+# +++++++++++++++++++++++++++++++++++++++++++#
 
 # import os
 #
@@ -102,7 +102,7 @@ import os
 #     path_to_project = os.path.abspath(os.path.join('..', '..', i_project))
 #     print_dirs(path_to_project)
 
-#9.2 Модуль os проверки
+# 9.2 Модуль os проверки
 
 # import os
 #
@@ -120,7 +120,7 @@ import os
 #     path_to_project = os.path.abspath(os.path.join('..', '..', i_project))
 #     print_dirs(path_to_project)
 
-#+++++++++++++++++++++++++++++++++++++++++++#
+# +++++++++++++++++++++++++++++++++++++++++++#
 
 # import os
 #
@@ -149,22 +149,22 @@ import os
 #
 #     print('Файл не найден')
 
-#9.3 Базовые операции с файлами open, close, read
+# 9.3 Базовые операции с файлами open, close, read
 
 # speaker_file = open('speaker_file.txt', 'r', encoding='utf-8')
 
-#+++++++++++++++++++++++++++++++++++++++++++#
+# +++++++++++++++++++++++++++++++++++++++++++#
 
 # data = speaker_file.read()
 # print(data)
 
-#+++++++++++++++++++++++++++++++++++++++++++#
+# +++++++++++++++++++++++++++++++++++++++++++#
 # for i_line in speaker_file:
 #     print(i_line, end='')
 #
 # speaker_file.close()
 
-#9.4 Метод write. Режимы записи
+# 9.4 Метод write. Режимы записи
 
 # speaker_file = open('speaker_file.txt', 'r', encoding='utf-8')
 #
@@ -181,7 +181,7 @@ import os
 # counts_file.write(sym_count_str)
 # counts_file.close()
 
-#+++++++++++++++++++++++++++++++++++++++++++#
+# +++++++++++++++++++++++++++++++++++++++++++#
 
 # import os
 #
@@ -215,7 +215,7 @@ import os
 #         print('Файл не найден.')
 #         history_file.write('Файл не найден.\n')
 
-#9.5 Перемещение курсора в файле. Метод seek
+# 9.5 Перемещение курсора в файле. Метод seek
 
 # spkr_file = open('spkr_file.txt', 'r'б encoding='utf-8')
 # data = spkr_file.raed(10)
@@ -225,11 +225,51 @@ import os
 # print(data_2)
 # spkr_file.close()
 
+# 10.2 Обработка исключений операторы try, except
 
+# num_sum = 0
+# num_count = 0
+#
+# try:
+#     numbers_file = open('numbers_file.txt', 'r')
+#     for i_line in numbers_file:
+#         num_sum += 1
+#         num_count += 1
+#     numbers_file.close()
+#     print('Среднее арифм.', num_sum / num_count)
+# except FileNotFoundError:
+#     print('Такого файла не существует.')
+# except ValueError:
+#     print('Нельзя преобразовать в целое число.')
 
+# +++++++++++++++++++++++++++++++++++++++++++#
 
-
-
-
-
-
+# def divide(number):
+#     return 10 / number
+#
+#
+# def sum_of_divided(left, right):
+#     div_sum = 0
+#     for i_num in range(left, right + 1):
+#         try:
+#             div_sum += divide(i_num)
+#             print(div_sum)
+#         except ZeroDivisionError:
+#             print('Нельзя делить на ноль!')
+#     return div_sum
+#
+#
+# total = 0
+#
+# try:
+#     numbers_file = open('numbers_file.txt', 'r')
+#     for i_line in numbers_file:
+#         nums_list = i_line.split()
+#         first_num = int(nums_list[0])
+#         second_num = int(nums_list[1])
+#
+#         total += sum_of_divided(first_num, second_num)
+#     print('Общая сумма:', total)
+#
+# except ZeroDivisionError:
+#     print('Нельзя делить на ноль!')
