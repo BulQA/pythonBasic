@@ -273,3 +273,97 @@ import os
 #
 # except ZeroDivisionError:
 #     print('Нельзя делить на ноль!')
+
+#10.3 Обработка исключений операторы else, finally
+
+# def divide(number):
+#     return 10 / number
+#
+#
+# def sum_of_divided(left, right):
+#     div_sum = 0
+#     for i_num in range(left, right + 1):
+#         try:
+#             div_sum += divide(i_num)
+#             print(div_sum)
+#         except ZeroDivisionError:
+#             print('На ноль делить нельзя!')
+#     return div_sum
+#
+# total = 0
+#
+# try:
+#     numbers_file = open('numbers.txt', 'r')
+#     for i_line in numbers_file:
+#         nums_list = i_line.split()
+#         first_num = int(nums_list[0])
+#         second_num = int(nums_list[1])
+#         total += sum_of_divided(first_num, second_num)
+#     print('Общая сумма:', total)
+#
+# except FileNotFoundError:
+#     print('Файл numbers.txt не найден.')
+# except ZeroDivisionError:
+#     print('На ноль делить нельзя!')
+#
+#
+# answer_file = open('answer.txt', 'w')
+# try:
+#     answer_file.write('The answer is: ')
+#     answer_file.write(str(total))
+# except TypeError:
+#     print('Ошибка записи в файл: тип данных не строка.')
+# else:
+#     print('Программа выполнилась без ошибок.')
+# finally:
+#     answer_file.close()
+#     print(answer_file.closed)
+
+#10.4 Вызов исключений оператор raise
+
+# sym_sum = 0
+# line_count = 0
+#
+# try:
+#     people_file = open('people_file.txt', 'r')
+#     for i_line in people_file:
+#         lenght = len(i_line)
+#         line_count += 1
+#         if i_line.endswith('\n'):
+#             lenght -= 1
+#         if lenght < 5:
+#             raise BaseException('Длина {} строки меньше 5 символов.'.format(line_count))
+#         sym_sum += lenght
+#     people_file.close()
+#
+# except FileNotFoundError:
+#     print('Файл не найден.')
+# finally:
+#     print('Найденная сумма символов:', sym_sum)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# names_list = []
+#
+# while True:
+#     try:
+#         name = input('Введите имя: ')
+#         if name.lower() == 'error':
+#             raise BaseException('Ты сломал программу!')
+#         if not name.isalpha():
+#             raise TypeError
+#         names_list.append(name)
+#         if len(names_list) == 5:
+#             print('Место закончилось')
+#             break
+#     except TypeError:
+#         print('Ты чего ввёл?')
+#     except BaseException:
+#         names_list = []
+#         print('Введено стоп-слово.')
+#         raise ValueError('Пожалуйста, не вводите error')
+#
+# names_file = open('names.txt', 'w')
+# names_file.write('\n'.join(names_list))
+# names_file.close()
+# print('Программа закончена, запись завершена')
