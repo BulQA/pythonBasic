@@ -367,3 +367,42 @@ import os
 # names_file.write('\n'.join(names_list))
 # names_file.close()
 # print('Программа закончена, запись завершена')
+
+#10.5 Context manager оператор with
+
+# line_count = 0
+# sym_sum = 0
+#
+# try:
+# 	with open('people.txt', 'r') as people_file:
+# 	    for i_line in people_file:
+# 	        line_count += 1
+# 	        length = len(i_line)
+# 	        if i_line.endswith('\n'):
+# 	            length -= 1
+# 	        if length < 3:
+# 	            raise BaseException(f'Длина {line_count} строки меньше 3 символов.')
+# 	        sym_sum += len(i_line)
+# 	    people_file.close()
+#
+# except FileNotFoundError:
+#     print('Файл не найден.')
+# finally:
+# 	print('Найденная сумма символов:', sym_sum)
+# 	print(people_file.closed)
+#
+# try:
+# 	num = int(input())
+# except TypeError:
+# 	print('Это не число.')
+#
+# else: # оператор запускает в случае успешной работы кода
+# 	print('Код успешно отработал.')
+# finally: # выполняет код в любом случае, а так же выполняет подчистку данных
+# 	file.close()
+#
+# # если нужно вызвать исключение в ручную или для проброса исключений
+# raise TypeError('Неверный тип данных.')
+#
+# # контекстный менеджер, автоматически закрывает файлы даже при сбое
+# with open('text.txt', 'r') as text_file
