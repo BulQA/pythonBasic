@@ -164,3 +164,121 @@
 # for _ in range(3):
 #     my_garden.grow_all()
 #     my_garden.are_all_ripe()
+
+#11.5 Определение классов в модулях и их подключение
+
+# from garden import PotateGarden
+#
+#
+# my_garden = PotateGarden(5)
+# my_garden.are_all_ripe()
+#
+# for _ in range(3):
+#     my_garden.grow_all()
+#     my_garden.are_all_ripe()
+
+
+#12.1 Разбор домашнего задания
+
+# class Water:
+#     def __str__(self):
+#         return 'Вода'
+#
+#     def __add__(self, other):
+#         if isinstance(other, Air):
+#             return Storm()
+#         elif isinstance(other, Fire):
+#             return Vapor()
+#         elif isinstance(other, Earth):
+#             return Dirt()
+#         else:
+#             return None
+#
+#
+# class Air:
+#     def __str__(self):
+#         return 'Воздух'
+#
+#     def __add__(self, other):
+#         if isinstance(other, Water):
+#             return Storm()
+#         elif isinstance(other, Fire):
+#             return Lightning()
+#         elif isinstance(other, Earth):
+#             return Dust()
+#         else:
+#             return None
+#
+#
+# class Fire:
+#     def __str__(self):
+#         return 'Огонь'
+#
+#     def __add__(self, other):
+#         if isinstance(other, Water):
+#             return Vapor()
+#         elif isinstance(other, Air):
+#             return Lightning()
+#         elif isinstance(other, Earth):
+#             return Lava()
+#         else:
+#             return None
+#
+#
+# class Earth:
+#     def __str__(self):
+#         return 'Земля'
+#
+#     def __add__(self, other):
+#         if isinstance(other, Water):
+#             return Dirt()
+#         elif isinstance(other, Air):
+#             return Dust()
+#         elif isinstance(other, Fire):
+#             return Lava()
+#         else:
+#             return None
+#
+#
+# # Результаты взаимодействий
+# class Storm:
+#     def __str__(self):
+#         return 'Шторм'
+#
+#
+# class Vapor:
+#     def __str__(self):
+#         return 'Пар'
+#
+#
+# class Dirt:
+#     def __str__(self):
+#         return 'Грязь'
+#
+#
+# class Lightning:
+#     def __str__(self):
+#         return 'Молния'
+#
+#
+# class Lava:
+#     def __str__(self):
+#         return 'Лава'
+#
+#
+# class Dust:
+#     def __str__(self):
+#         return 'Пыль'
+#
+#
+# water = Water()
+# air = Air()
+# fire = Fire()
+# earth = Earth()
+#
+# print(water + air)    # Вода + Воздух = Шторм
+# print(water + fire)   # Вода + Огонь = Пар
+# print(water + earth)  # Вода + Земля = Грязь
+# print(air + fire)     # Воздух + Огонь = Молния
+# print(fire + earth)   # Огонь + Земля = Лава
+# print(air + earth)    # Воздух + Земля = Пыль
