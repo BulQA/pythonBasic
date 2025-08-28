@@ -282,3 +282,43 @@
 # print(air + fire)     # Воздух + Огонь = Молния
 # print(fire + earth)   # Огонь + Земля = Лава
 # print(air + earth)    # Воздух + Земля = Пыль
+
+#12.2 Инкапсуляция и сокрытие данных. Геттеры и сеттеры
+
+# class Person:
+#     __count = 0
+#
+#     def __init__(self, name, age):
+#         self.__name = name
+#         self.__age = age
+#         Person.__count += 1
+#
+#     def __init__(self):
+#         return 'Имя: {}\tВозраст: {}'.format(self.__name, self.__age)
+#
+#     def get_count(self): #геттер
+#         return self.__count
+#
+#     def get_age(self):
+#         return self.__age
+#
+#     def set_age(self, age): #сеттер
+#         if age in range(1, 99):
+#             self.__age = age
+#         else:
+#             raise Exception('Недопустимое значение')
+#
+# masha = Person('Masha', 20)
+# petya = Person('Petya', 23)
+# print(masha.get_count())
+#
+# new_age = 40
+# petya.set_age(new_age)
+# print(petya.get_age)
+
+# __count  сокрытие данных
+
+# Инкапсуляция - объеденение данных и методов в
+#единый объект и сокрытие реализации от пользователя
+
+# Приватными могут быть не только методы, но и классы
