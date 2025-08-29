@@ -239,8 +239,6 @@
 #         else:
 #             return None
 #
-#
-# # Результаты взаимодействий
 # class Storm:
 #     def __str__(self):
 #         return 'Шторм'
@@ -322,3 +320,97 @@
 #единый объект и сокрытие реализации от пользователя
 
 # Приватными могут быть не только методы, но и классы
+
+#12.3 Наследование
+
+# class Pet:
+#     legs = 4
+#     has_tail = True
+#
+#     def __str__(self):
+#         tail = 'Да' if self.has_tail else 'Нет'
+#         return 'Количество ног: {legs}\nХвост присутствует - {has_tail}'.format(
+#             legs=self.legs,
+#             has_tail=tail
+#         )
+#
+#
+# class Cat(Pet):
+#     def sound(self):
+#         print('Мяу')
+#
+#
+# class Dog(Pet):
+#     def sound(self):
+#         print('Гав')
+#
+#
+# class Frog(Pet):
+#     has_tail = False  # у лягушки нет хвоста
+#
+#     def sound(self):
+#         print('Ква')
+#
+# cat = Cat()
+# print(cat)
+# cat.soud()
+#
+# dog = Dog()
+# dog.soud()
+# print(dog)
+#
+# frog = Frog()
+# frog.soud()
+# print(frog)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# class Ship:
+#     def __init__(self, model):
+#         self.__model = model
+#
+#     def __str__(self):
+#         return '\nМодель корабля: {model}'.format(
+#             model=self.__model
+#         )
+#
+#     def sail(self):
+#         print('\nКорабль покинул гавань.')
+#
+#
+# class WarShip(Ship):
+#     def __init__(self, model, gun):
+#         super().__init__(model)
+#         self.gun = gun
+#
+#     def attack(self):
+#         print("На корабле установлено оружие:", self.gun)
+#
+#
+# class CargoShip(Ship):
+#     def __init__(self, model):
+#         super().__init__(model)
+#         self.tonnage_load = 0
+#
+#     def load(self):
+#         print('Загружаем корабль')
+#         self.tonnage_load += 1
+#         print('Текущая загруженность:', self.tonnage_load)
+#
+#     def unload(self):
+#         print('Разгружаем корабль')
+#         if self.tonnage_load > 0:
+#             self.tonnage_load -= 1
+#         else:
+#             print('Корабль уже разгружен!')
+#         print('Текущая загруженность:', self.tonnage_load)
+#
+# warship = WarShip('Abc', 'Торпеды')
+# print(warship)
+# warship.attack()
+#
+# cargoship = CargoShip('Titanic')
+# print(cargoship)
+# cargoship.load()
+# cargoship.unload()
+# cargoship.unload()
