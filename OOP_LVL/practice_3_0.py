@@ -414,3 +414,122 @@
 # cargoship.load()
 # cargoship.unload()
 # cargoship.unload()
+
+# 12.4 Полиморфизм
+
+# class Pet:
+#     legs = 4
+#     has_tail = True
+#
+#     def __str__(self):
+#         tail = 'Да' if self.has_tail else 'Нет'
+#         return 'Количество ног: {legs}\nХвост присутствует - {has_tail}'.format(
+#             legs=self.legs,
+#             has_tail=tail
+#         )
+#
+#     def walk(self):
+#         print('Гуляет')
+#
+#
+# class Cat(Pet):
+#     def sound(self):
+#         print('Мяу')
+#
+#
+# class Dog(Pet):
+#     def sound(self):
+#         print('Гав')
+#
+#
+# class Frog(Pet):
+#     has_tail = False  # у лягушки нет хвоста
+#
+#     def sound(self):
+#         print('Ква')
+#
+#     def walk(self):
+#         print('Плавает')
+#
+#
+# cat = Cat()
+# print(cat)
+# cat.sound()
+# cat.walk()
+#
+# dog = Dog()
+# dog.sound()
+# print(dog)
+# dog.walk()
+#
+# frog = Frog()
+# frog.sound()
+# print(frog)
+# frog.walk()
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# class Person:
+#     __count = 0
+#
+#     def __init__(self, name, age):
+#         self.__name = name
+#         self.set_age(age)
+#         Person.__count += 1
+#
+#     def __str__(self):
+#         return 'Имя: {name}\tВозраст: {age}'.format(
+#             name=self.get_name(),
+#             age=self.__age
+#         )
+#
+#     def get_count(self):
+#         return Person.__count
+#
+#     def get_age(self):
+#         return self.__age
+#
+#     def get_name(self):
+#         return self.__name
+#
+#     def set_age(self, age):
+#         if age in range(1, 90):
+#             self.__age = age
+#         else:
+#             raise Exception("Недопустимый возраст")
+#
+#
+# class Student(Person):
+#     def __init__(self, name, age, university):
+#         super().__init__(name, age)
+#         self.university = university
+#
+#     def __str__(self):
+#         info = super().__str__()
+#         info = '\n'.join((
+#             info,
+#             "Студент учится в университете {}".format(self.university)
+#         ))
+#         return info
+#
+#
+# class Employee(Person):
+#     def __init__(self, name, age, company, salary):
+#         super().__init__(name, age)
+#         self.company = company
+#         self.salary = salary
+#
+#     def __str__(self):
+#         info = super().__str__()
+#         info = '\n'.join((
+#             info,
+#             "Компания: {}\tЗарплата: {}".format(self.company, self.salary)
+#         ))
+#         return info
+#
+#
+# new_student = Student('Tom', 25, 'MTI')
+# print(new_student)
+#
+# new_emp = Employee(name='Cris', age=23, salary=5000, company='Yandex')
+# print(new_emp)
