@@ -70,3 +70,103 @@
 #
 #
 # print(Person.__doc__)
+
+#13.2 Итераторы
+
+# items = [10, 20, 30]
+#
+# iterator = iter(items)
+#
+# print(next(iterator))  # 10
+# print(next(iterator))  # 20
+# print(next(iterator))  # 30
+#
+# # следующий вызов вызовет ошибку StopIteration
+# # print(next(iterator))
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# items = ['a', 'b', 'c']
+#
+# iterator = iter(items)
+#
+# for elem in iterator:
+#     print(elem)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# class Countdown:
+#     def __init__(self, start):
+#         self.current = start
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.current <= 0:
+#             raise StopIteration
+#         value = self.current
+#         self.current -= 1
+#         return value
+#
+#
+# for num in Countdown(5):
+#     print(num)   # 5, 4, 3, 2, 1
+
+#13.4 Реализация итераторов
+
+# import random
+#
+# class RandomNumbers:
+#     def __init__(self, limit):
+#         self.__limit = limit
+#         self.__counter = 0
+#
+#     def __iter__(self):
+#         return iter
+#
+#     def __next__(self):
+#         if self.__counter < self.__limit:
+#             self.__counter += 1
+#             return random.randint(0, 10)
+#         else:
+#             raise StopIteration
+#
+# new_iter = RandomNumbers(limit=3)
+#
+# print(next(new_iter))
+#
+# for num in new_iter:
+#     print(num)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# class Fibonacci:
+#
+#     def __init__(self, number):
+#         self.counter = 0
+#         self.cur_val = 0
+#         self.next_val = 1
+#         self.number = number
+#
+#     def __iter__(self):
+#         self.counter = 0
+#         self.cur_val = 0
+#         self.next_val = 1
+#         return self
+#
+#     def __next__(self):
+#         self.counter += 1
+#         if self.counter > 1:
+#             if self.counter > self.number:
+#                 raise StopIteration()
+#             self.cur_val, self.next_val = self.next_val, self.cur_val + self.next_val
+#         return self.cur_val
+#
+#
+# fibo = Fibonacci(10)
+# for i_value in fibo:
+#     print(i_value)
+#
+#
+# print(7 in Fibonacci(10))
