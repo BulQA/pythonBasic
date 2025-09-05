@@ -56,3 +56,83 @@
 # manager.new_task("Построить дом", 1)
 #
 # print(manager)
+
+#14.1 Разбор домашнего задания
+
+# from typing import Any, Optional
+#
+#
+# class Node:
+#     def __init__(self, value: Optional[Any] = None, next: Optional['Node'] = None) -> None:
+#         self.value = value
+#         self.next = next
+#
+#     def __str__(self) -> str:
+#         return 'Node [{value}]'.format(
+#             value=str(self.value)
+#         )
+#
+#
+# class LinkedList:
+#     def __init__(self) -> None:
+#         self.head: Optional[Node] = None
+#         self.length = 0
+#
+#     def __str__(self) -> str:
+#         if self.head is not None:
+#             current = self.head
+#             values = [str(current.value)]
+#             while current.next is not None:
+#                 current = current.next
+#                 values.append(str(current.value))
+#             return '[{values}]'.format(values=' '.join(values))
+#         return 'LinkedList []'
+#
+#     def append(self, elem: Any) -> None:
+#         new_node = Node(elem)
+#         if self.head is None:
+#             self.head = new_node
+#             self.length += 1
+#             return
+#
+#         last = self.head
+#         while last.next:
+#             last = last.next
+#         last.next = new_node
+#         self.length += 1
+#
+#     def remove(self, index: int) -> None:
+#         if self.length == 0 or index >= self.length or index < 0:
+#             raise IndexError("Index out of range")
+#
+#         cur_node = self.head
+#
+#         if index == 0:  # удаляем первый элемент
+#             self.head = cur_node.next
+#             self.length -= 1
+#             return
+#
+#         prev = None
+#         cur_index = 0
+#
+#         while cur_node is not None:
+#             if cur_index == index:
+#                 prev.next = cur_node.next
+#                 self.length -= 1
+#                 return
+#             prev = cur_node
+#             cur_node = cur_node.next
+#             cur_index += 1
+#
+#
+# new_list = LinkedList()
+#
+# new_list.append(10)
+# new_list.append(20)
+# new_list.append(30)
+#
+# print(new_list)
+# print()
+#
+# new_list.remove(1)
+# print(new_list)
