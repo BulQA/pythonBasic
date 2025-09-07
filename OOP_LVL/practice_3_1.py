@@ -274,3 +274,188 @@
 #
 # new_cubes = timer(cubes_sum, 200)
 # print(new_cubes)
+
+#14.3 Декораторы
+
+# import time
+# from typing import Callable, Any
+#
+# def timer(func: Callable) -> Callable:
+#     '''
+#     Декоратор, выводит время, которое заняло
+#     выполнение декорируемой функции
+#     '''
+#     def wrapped_func(*args, **kwargs) -> Any:
+#         started_at = time.time()
+#         result = func(*args, **kwargs)
+#         ended_at = time.time()
+#
+#         run_time = round(ended_at - started_at, 4)
+#
+#         print('Функция работала {} секунд(ы)'.format(run_time))
+#         return result
+#     return wrapped_func
+#
+#
+# @timer
+# def squares_sum() -> int:
+#     number = 100
+#     result = 0
+#     for _ in range(number + 1):
+#         result += sum([i_num ** 2 for i_num in range(1000)])
+#     return result
+#
+#
+# @timer
+# def cubes_sum(number: int) -> int:
+#     result = 0
+#     for _ in range(number + 1):
+#         result += sum([i_num ** 3 for i_num in range(1000)])
+#     return result
+#
+#
+# new_sum = squares_sum()
+# print(new_sum)
+#
+# my_cubes_sum = cubes_sum(100)
+# print(my_cubes_sum)
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# def decorator(func):    # Функция, которая ожидает другую функцию в качестве аргумента
+#     def wrapped_func(*args, **kwargs):
+#         # Код до вызова функции
+#         value = func(*args, **kwargs)
+#         # Код после вызова функции
+#         return value
+#     return wrapped_func
+
+#14.4 Некоторые особенности использования декораторов
+
+# import time
+# from typing import Callable, Any
+#
+# def timer(func: Callable) -> Callable:
+#     '''
+#     Декоратор, выводит время, которое заняло
+#     выполнение декорируемой функции
+#     '''
+#     def wrapped_func(*args, **kwargs) -> Any:
+#         started_at = time.time()
+#         result = func(*args, **kwargs)
+#         ended_at = time.time()
+#
+#         run_time = round(ended_at - started_at, 4)
+#
+#         print('Функция работала {} секунд(ы)'.format(run_time))
+#         return result
+#     return wrapped_func
+#
+#
+# def logging(func: Callable) -> Callable:
+#     '''
+#     Декоратор, логирующий работу кода
+#     '''
+#     def wrapped_func(*args, **kwargs) -> Any:
+#         print(
+#             '\nВызывается функция {func}\t'
+#             'Позиционные аргументы: {args}\t'
+#             'Именованные аргументы: {kwargs}'.format(
+#                 func=func.__name__, args=args, kwargs=kwargs
+#             )
+#         )
+#         result = func(*args, **kwargs)
+#         print('Функция успешно завершила работу')
+#         return result
+#     return wrapped_func
+#
+#
+# @logging
+# @timer
+# def squares_sum() -> int:
+#     number = 100
+#     result = 0
+#     for _ in range(number + 1):
+#         result += sum([i_num ** 2 for i_num in range(1000)])
+#     return result
+#
+#
+# @logging
+# @timer
+# def cubes_sum(number: int) -> int:
+#     result = 0
+#     for _ in range(number + 1):
+#         result += sum([i_num ** 3 for i_num in range(1000)])
+#     return result
+
+#+++++++++++++++++++++++++++++++++++++++++++#
+
+# from typing import Callable
+#
+# plugins = dict()
+#
+# def register(func: Callable) -> Callable:
+#     '''
+#     Декоратор регистрирующий функцию как плагин
+#     '''
+#     plugins[func.__name__] = func
+#     return func
+#
+# @register
+# def hello(name: str) -> str:
+#     return 'Hello {name}'.format(name=name)
+#
+# @register
+# def goodbye(name: str) -> str:
+#     return 'Goodbye {name}'.format(name=name)
+#
+# print(plugins)
+# print(hello('Mask'))
+
+
+#14.5 Модуль functools. Декоратор functools.wraps()
+
+# import time
+# from typing import Callable, Any
+# import functools
+#
+# def timer(func: Callable) -> Callable:
+#     '''
+#     Функция нахождения суммы квадратов
+#     для каждого N от 0 до 1000,
+#     где 0 <= N <= 100
+#
+#     :return: сумма квадратов
+#     '''
+#     @functools.wraps(func)
+#     def wrapped_func(*args, **kwargs) -> Any:
+#         started_at = time.time()
+#         result = func(*args, **kwargs)
+#         ended_at = time.time()
+#
+#         run_time = round(ended_at - started_at, 4)
+#
+#         print('Функция работала {} секунд(ы)'.format(run_time))
+#         return result
+#     return wrapped_func
+#
+#
+# @timer
+# def squares_sum() -> int:
+#     number = 100
+#     result = 0
+#     for _ in range(number + 1):
+#         result += sum([i_num ** 2 for i_num in range(1000)])
+#     return result
+#
+#
+# @timer
+# def cubes_sum(number: int) -> int:
+#     result = 0
+#     for _ in range(number + 1):
+#         result += sum([i_num ** 3 for i_num in range(1000)])
+#     return result
+#
+#
+# print(squares_sum.__doc__)
+# print(squares_sum.__name__)
