@@ -459,3 +459,65 @@
 #
 # print(squares_sum.__doc__)
 # print(squares_sum.__name__)
+
+#15.2 Множественное наследование MRO
+
+# from typing import List
+#
+# class Person:
+#     '''Базовый класс Человек '''
+#
+#     def __init__(self, name: str, age: int) -> None:
+#         self.__name = name
+#         self.__age = age
+#
+#     def shout(self):
+#         print('я - Человек')
+#
+#
+# class Employee(Person):
+#     ''' Работник, дочерний класс от Person '''
+#
+#     def __init__(self, name: str, age: int) -> None:
+#         super().__init__(name, age)
+#         self.__salary = 10000
+#
+#     def get_salary(self) -> int:
+#         return self.__salary
+#
+#     def shout(self):
+#         print('я - Работник')
+#
+#
+# class Parent(Person):
+#     ''' Родитель, дочерний класс от Person '''
+#
+#     def __init__(self, name: str, age: int) -> None:
+#         super().__init__(name, age)
+#         self.__kids = ['Masha', 'Pasha']
+#
+#     def get_kids(self) -> List[str]:
+#         return self.__kids
+#
+#     def shout(self):
+#         print('я - Родитель')
+#
+#
+# class Citizen(Parent, Employee):
+#     ''' Житель - является и Родителем и Работником '''
+#
+#     def shout(self):
+#         print('я - Гражданин')
+#
+#
+# new_citizen = Citizen(name='Max', age=27)
+# print(new_citizen.get_salary())
+# print(new_citizen.get_kids())
+# new_citizen.shout()
+# # Method Resolution Order (MRO) - порядок разрешения методов
+# print(new_citizen.__class__.__mro__)
+#
+# # Плюс: позволяет сокращать затраты на разработку класса и избегать повторного использования кода
+# # Минусы: повышает сложность создания и модификации системы классов. Увеличивает связь между классами,
+# # а значит, изменения в базовом классе могут повлечь серьёзные проблемы в дочерних
+# # Итого: обычно не используют, но есть ситуации, когда оно необходимо.
