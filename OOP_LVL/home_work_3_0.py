@@ -164,5 +164,39 @@
 # def test():
 #     print("Тест кейс 1")
 #
-#
 # test()
+
+#16.1 Разбор домашнего задания
+
+# class Date:
+#
+#     def __init__(self, day: int=0, month: int=0, year: int=0) -> None:
+#         self.day = day
+#         self.month =month
+#         self.year = year
+#
+#     def __str__(self) -> str:
+#         return 'День: {}\tМесяц: {}\tГод: {}'.format(
+#             self.day, self.month, self.year
+#         )
+#
+#     @classmethod
+#     def is_date_valid(cls, date: str) ->bool:
+#         day, month, year = map(int, date.split('-'))
+#         date_obj = cls(day, month, year)
+#         return 0 < day <= 31 and 0 < month <= 12 and 0 < year <= 9999
+#
+#     @classmethod
+#     def from_string(cls, date: str) -> 'Date':
+#         #dmy_list = date.split('-')
+#         #day, month, year = int(dmy_list[0]), int(dmy_list[1]), int(dmy_list[2])
+#         day, month, year = map(int, date.split('-'))
+#         date_obj = cls(day, month, year)
+#         return date_obj
+#
+# new_date = Date.from_string('11-11-2010')
+# print(new_date)
+#
+# print(Date.is_date_valid('11-11-2010'))
+#
+# print(Date.is_date_valid('40-11-4099'))
