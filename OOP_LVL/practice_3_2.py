@@ -172,6 +172,96 @@
 # Cat.sound()
 # Cat.sound()
 
+#16.2 Декоратор context manager
+
+# from contextlib import contextmanager
+# from collections.abc import Iterator
+#
+# @contextmanager
+# def next_num(num: int) -> Iterator[int]:
+#     print('Входим в функцию')
+#
+#     try:
+#         yield num + 1
+#     except ZeroDivisionError as exc:
+#         print('Обнаружена ошибка:', exc)
+#     finally:
+#         print('В этом блоке код выполниться в любом случае.')
+#     print('Выход из функции')
+#
+#
+# with next_num(-1) as next:
+#     print('Следующее число: {}'.format(next))
+#
+# import time
+# from contextlib import contextmanager
+# from collections import Iterator
+#
+# @contextmanager
+# def timer() -> Iterator:
+#     start = time.time()
+#
+#     try:
+#         yield
+#     except Exception as ex:
+#         print(ex)
+#     finally:
+#         print(time.time() - start)
+#
+# with timer as t1:
+#     print('Первая часть.')
+#     val_1 = 100 * 100 * 10000
+#
+# with timer as t2:
+#     print('Вторая часть.')
+#     val_2 = 200 * 200 * 20000
+
+#16.3 Декораторы с аргументами
+
+# import time
+# import functools
+# from collections.abc import Callable
+# from typing import Optional
+#
+#
+# def timer_with_precision(_func: Optional[Callable] = None, *, precision: int = 2) -> Callable:
+#     def timer_decorator(func: Callable) -> Callable:
+#         @functools.wraps(func)
+#         def wrapped(*args, **kwargs):
+#             started_at = time.time()
+#             result = func(*args, **kwargs)
+#             ended_at = time.time()
+#             run_time = round(ended_at - started_at, precision)
+#             print('Функция работала {} секунд(ы).'.format(run_time))
+#             return result
+#         return wrapped
+#     if _func is None:
+#         return timer_decorator
+#     return timer_decorator(_func)
+#
+#
+# @timer_with_precision
+# def squares_sum() -> int:
+#     number = 100
+#     result = 0
+#     for _ in range(number + 1):
+#         result += sum([i_num ** 2 for i_num in range(1000)])
+#     return result
+#
+#
+# @timer_with_precision(precision=4)
+# def cubes_sum(number: int) -> int:
+#     result = 0
+#     for _ in range(number + 1):
+#         result += sum([i_num ** 3 for i_num in range(1000)])
+#     return result
+#
+#
+# new_sum = squares_sum()
+# print(new_sum)
+#
+# new_cubes_sum = cubes_sum(number=300)
+# print(new_cubes_sum)
 
 
 
