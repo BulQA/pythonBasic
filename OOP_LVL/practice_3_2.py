@@ -439,3 +439,73 @@
 # последним.
 # '''
 
+#17.4 Lambda-функции
+
+# from typing import List
+#
+# #def string_to_int(elem: str) -> int:
+# #   return int(elem[4:])
+#
+# users: List[str] = ['user0', 'user10', 'user20', 'user30', 'user40', 'user50']
+#
+# #sorted_users = sorted(users, key=string_to_int)
+# sorted_users = sorted(users, key=lambda elem: int(elem[4:]))
+# print(sorted_users)
+#
+# #+++++++++++++++++++++++++++++++++++++++++++#
+#
+# x = lambda a: a + 10
+# print(x(10))
+#
+# '''
+# Использование lambda функций - Всегда используйте оператор
+# def вместо оператора присваивания, который связывает лямбду
+# непосредственно с идентификатором.
+#
+# def f(x):
+#     return 2 * x #Хороший тон
+#
+# f = lambda x: 2 * x #Плохой тон
+# '''
+
+#17.5 Функции map и filter
+
+# #def from_string(cls, date_as_string: str) -> 'Date':
+# #    day, mount, year = map(int, date_as_string.split('-'))
+# #    date = cls(day, mount, year)
+#
+# from typing import List
+#
+# new_nums: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# other_nums: List[int] = [1, 2, 4, 5, 6, 5, 3, 1, 8]
+#
+# result: List[int] = list(map(lambda x, y: x + y, new_nums, other_nums))
+#
+# print(result)
+#
+# #+++++++++++++++++++++++++++++++++++++++++++#
+#
+# result_even: List[int] = list(filter(lambda x: x % 2 == 0, result))
+# print(result_even)
+#
+# #+++++++++++++++++++++++++++++++++++++++++++#
+#
+# cubes_result = map(lambda num: num * 3, filter(lambda num: num % 2, new_nums))
+# print(list(cubes_result))
+#
+# #+++++++++++++++++++++++++++++++++++++++++++#
+#
+# cubes_sum_result = sum(map(lambda num: num * 3, filter(lambda num: num % 2, new_nums)))
+# print(cubes_sum_result)
+#
+# #+++++++++++++++++++++++++++++++++++++++++++#
+#
+# animals = ['cat', 'dog', 'cow']
+# #нужно преобразовать в ['Cat','Dog', 'Cow']
+#
+# new_animals = list(map(lambda elem: elem.capitalize(), animals))
+# #Решение с мар удобно использовать для ленивых вычислений
+#
+# new_animals = [elem.capitalize() for elem in animals]
+# #lambda замедляет мар, но он всё равно обычно быстрее list comprehensions
+# #(если выражение достаточно простое)
