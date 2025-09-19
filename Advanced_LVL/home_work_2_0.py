@@ -300,6 +300,23 @@
 #     else:
 #         print('Неизвестная команда')
 
+#2.1 Списки и из инициализация
 
+# numbers = [3,7,5]
+#
+# while True:
+#     number = int(input('Новое число: '))
+#     numbers.append(number)
+#     print('Текущий список чисел:', numbers)
+#
+#     for i in numbers:
+#         print(i ** 2, i ** 3, i ** 4)
+#         print()
 
+# `````````````````Дз```````````````````````#
+
+# numbers = []
+# for i in range(101):
+#     numbers.append(i)
+# print(numbers)
 
