@@ -320,3 +320,19 @@
 #     numbers.append(i)
 # print(numbers)
 
+# `````````````````Дз```````````````````````#
+
+# employees = []
+#
+# count = int(input('Кол-во сотрудников в офисе: '))
+#
+# for i in range(count):
+#     emp_id = int(input('ID сотрудника: '))
+#     employees.append(emp_id)
+#
+# search_id = int(input('Какой ID ищем? '))
+#
+# if search_id in employees:
+#     print('Сотрудник на месте')
+# else:
+#     print('Сотрудник не работает!')
