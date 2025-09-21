@@ -336,3 +336,50 @@
 #     print('Сотрудник на месте')
 # else:
 #     print('Сотрудник не работает!')
+
+#2.2 Индексы. Работа с элементами списка
+
+# nums_list = []
+#
+# N = int(input('Кол-во чисел в списке: '))
+#
+# for _ in range(N):
+#     num = int(input('Очередное число: '))
+#     nums_list.append(num)
+#
+# maximum = nums_list[0]
+# minimum = nums_list[0]
+#
+# for i in nums_list:
+#     if i > maximum:
+#         maximum = i
+#     if i < minimum:
+#         minimum = i
+#
+# print('Максимальное число в списке:', maximum)
+# print('Минимальное число в списке:', minimum)
+
+# `````````````````Дз```````````````````````#
+
+# scores = []
+#
+# N = int(input('Введите кол-во собак: '))
+#
+# for i in range(N):
+#     score = int(input(f'Очки собаки {i + 1}: '))
+#     scores.append(score)
+#
+# print('До обмена:', scores)
+#
+# min_index = 0
+# max_index = 0
+#
+# for i in range(1, N):
+#     if scores[i] < scores[min_index]:
+#         min_index = i
+#     if scores[i] > scores[max_index]:
+#         max_index = i
+#
+# scores[min_index], scores[max_index] = scores[max_index], scores[min_index]
+#
+# print('После обмена:', scores)
