@@ -383,3 +383,40 @@
 # scores[min_index], scores[max_index] = scores[max_index], scores[min_index]
 #
 # print('После обмена:', scores)
+
+#2.3 Работа со строками
+
+# N = int(input('Кол-во чисел в списке: '))
+#
+# numbers = []
+# for i in range(N):
+#     num = int(input(f'Введите {i + 1} число: '))
+#     numbers.append(num)
+#
+# K = int(input('Введите делитель: '))
+#
+# sum_indices = 0
+#
+# for idx, value in enumerate(numbers):
+#     if value % K == 0:
+#         print(f'Индекс числа {value}: {idx}')
+#         sum_indices += idx
+#
+# print('Сумма индексов:', sum_indices)
+
+# `````````````````Дз```````````````````````#
+
+# s = input('Введите строку: ')
+#
+# new_chars = []    # новый список символов
+# count = 0         # количество замен
+#
+# for ch in s:
+#     if ch == ':':
+#         new_chars.append(';')
+#         count += 1
+#     else:
+#         new_chars.append(ch)
+#
+# print('Исправленный список символов:', new_chars)
+# print('Количество замен:', count)
