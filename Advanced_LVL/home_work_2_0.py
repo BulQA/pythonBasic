@@ -420,3 +420,63 @@
 #
 # print('Исправленный список символов:', new_chars)
 # print('Количество замен:', count)
+
+#2.3 Списки работа со строками
+
+# s = input('Введите строку: ')
+# pos = int(input('Номер символа: ')) - 1   # переводим в индекс (счёт с 1)
+#
+# current = s[pos]
+#
+# # Соседи (если они есть)
+# left = s[pos - 1] if pos > 0 else None
+# right = s[pos + 1] if pos < len(s) - 1 else None
+#
+# if left is not None:
+#     print('Символ слева:', left)
+# else:
+#     print('Символ слева отсутствует')
+#
+# if right is not None:
+#     print('Символ справа:', right)
+# else:
+#     print('Символ справа отсутствует')
+#
+# count_same = 0
+# if left == current:
+#     count_same += 1
+# if right == current:
+#     count_same += 1
+#
+# if count_same == 0:
+#     print('Таких же символов нет.')
+# elif count_same == 1:
+#     print('Есть ровно один такой же символ.')
+# else:
+#     print('Есть два таких же символа.')
+
+# `````````````````Дз```````````````````````#
+
+# # Список слов пользователя
+# words_list = []
+# for i in range(3):
+#     word = input(f'Введите {i + 1} слово: ')
+#     words_list.append(word)
+#
+# # Счётчики для каждого слова
+# counts = [0, 0, 0]
+#
+# # Чтение текста по словам до "end"
+# while True:
+#     txt = input('Слово из текста: ')
+#     if txt == 'end':
+#         break
+#     for i, w in enumerate(words_list):
+#         if txt == w:
+#             counts[i] += 1
+#
+# # Вывод результатов
+# print('\nПодсчёт слов в тексте')
+# for w, c in zip(words_list, counts):
+#     print(f'{w}: {c}')
+
