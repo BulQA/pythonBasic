@@ -480,3 +480,13 @@
 # for w, c in zip(words_list, counts):
 #     print(f'{w}: {c}')
 
+#2.5 практическая работа
+
+# numbers = []
+# N = int(input('Введите число: '))
+#
+# for digit in range(1, N + 1):
+#     if digit % 2 != 0:
+#         numbers.append(digit)
+#
+# print('Список из нечётных чисел от одного до N:', numbers)
