@@ -490,3 +490,25 @@
 #         numbers.append(digit)
 #
 # print('Список из нечётных чисел от одного до N:', numbers)
+
+# `````````````````Дз```````````````````````#
+
+# players = ['Артемий', 'Борис', 'Влад', 'Гоша', 'Дима', 'Евгений', 'Женя', 'Захар']
+# print(players[0][::2])
+
+# `````````````````Дз```````````````````````#
+
+# count = int(input('Количество видеокарт: '))
+#
+# cards = []
+# for i in range(count):
+#     model = int(input(f'Видеокарта {i + 1}: '))
+#     cards.append(model)
+#
+# print('Старый список видеокарт:', cards)
+#
+# max_card = max(cards)
+#
+# new_cards = [c for c in cards if c != max_card]
+#
+# print('Новый список видеокарт:', new_cards)
