@@ -40,3 +40,46 @@
 #     pos += 1
 #
 # print('Номер, который получит новый контейнер:', pos + 1)
+
+# `````````````````Дз```````````````````````#
+
+# k = int(input('Сдвиг: '))
+# n = int(input('Количество элементов: '))
+# nums = []
+# for i in range(n):
+#     nums.append(int(input(f'Элемент {i + 1}: ')))
+#
+# if n > 0:
+#     k %= n
+#     nums[:] = nums[-k:] + nums[:-k]
+#
+# print('Сдвинутый список:', nums)
+
+# `````````````````Дз```````````````````````#
+
+# word = input('Введите слово: ')
+#
+# if word == word[::-1]:
+#     print('Слово является палиндромом')
+# else:
+#     print('Слово не является палиндромом')
+
+# `````````````````Дз```````````````````````#
+
+# n = int(input('Количество чисел: '))
+# nums = []
+# for k in range(n):
+#     nums.append(int(input(f'Число {k + 1}: ')))
+#
+# print('Изначальный список:', nums)
+#
+# for i in range(len(nums)):
+#     min_index = i
+#     for j in range(i + 1, len(nums)):
+#         if nums[j] < nums[min_index]:
+#             min_index = j
+#
+#     nums[i], nums[min_index] = nums[min_index], nums[i]
+#
+# print('Отсортированный список:', nums)
+
