@@ -83,3 +83,23 @@
 #
 # print('Отсортированный список:', nums)
 
+# `````````````````Дз```````````````````````#
+
+# numbers = []
+# for x in input('Введите число:').split():
+#     numbers.append(int(x))
+#
+# for digit in range(len(numbers) - 1, -1, -1):
+#     if numbers[digit] % 2 == 0:
+#         print(numbers[digit], end=" ")
+
+#2.6 Практическая работа (автотесты)
+
+# digits = []
+# n = int(input("Введите число N: "))
+#
+# for digit in range(1, n + 1):
+#         digits.append(digit)
+#
+# print("Список из нечётных чисел от 1 до N:", digits)
+
