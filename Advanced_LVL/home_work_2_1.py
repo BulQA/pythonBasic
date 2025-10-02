@@ -103,3 +103,49 @@
 #
 # print("Список из нечётных чисел от 1 до N:", digits)
 
+#3.3 Работа с несколькими списками. Методы extend и count
+
+# first = input("Первое сообщение: ")
+# second = input("Второе сообщение: ")
+#
+# count_first = first.count("!") + first.count("?")
+# count_second = second.count("!") + second.count("?")
+#
+# # Логика вывода
+# if count_first > count_second:
+#     print("Третье сообщение:", first + second)
+# elif count_second > count_first:
+#     print("Третье сообщение:", second + first)
+# else:
+#     print("Ой")
+
+# `````````````````Дз```````````````````````#
+
+# decoded_message = []
+# total_errors = 0
+# dropped_packets = 0
+#
+# count = int(input("Кол-во пакетов: "))
+#
+# for i in range(1, count + 1):
+#     print(f"\nПакет номер {i}")
+#     packet = []
+#     errors_in_packet = 0
+#
+#
+#     for j in range(1, 5):
+#         bit = int(input(f"{j} бит: "))
+#         packet.append(bit)
+#         if bit == -1:
+#             errors_in_packet += 1
+#
+#     if errors_in_packet <= 1:
+#         decoded_message.extend(packet)
+#         total_errors += errors_in_packet
+#     else:
+#         print("Много ошибок в пакете.")
+#         dropped_packets += 1
+#
+# print("\nИтоговое сообщение для декодирования:", decoded_message)
+# print("Количество ошибок:", total_errors)
+# print("Необработанных пакетов:", dropped_packets)
