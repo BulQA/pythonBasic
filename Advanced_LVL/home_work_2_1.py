@@ -149,3 +149,12 @@
 # print("\nИтоговое сообщение для декодирования:", decoded_message)
 # print("Количество ошибок:", total_errors)
 # print("Необработанных пакетов:", dropped_packets)
+
+#3.4 Вложенные списки
+
+# matrix = [[1, 2 ,3], [4, 5, 6], [7, 8, 9]]
+#
+# for row in matrix:
+#     for item in row:
+#         print(item, end=' ')
+#     print()
