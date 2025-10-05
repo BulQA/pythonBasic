@@ -158,3 +158,22 @@
 #     for item in row:
 #         print(item, end=' ')
 #     print()
+
+# `````````````````Дз```````````````````````#
+
+# teams = []
+#
+# n = int(input('Кол-во участников:'))
+# k = int(input('Кол-во человек в команде:'))
+#
+# if n % k == 0:
+#     print('Кол-во человек в команде: ', n / k)
+# else:
+#     teams = []
+#     for i in range(0, n, k):
+#         team = []
+#         for j in range(k):
+#             team.append(i + j + 1)
+#         teams.append(team)
+#
+#     print("Общий список команд:", teams)
