@@ -227,3 +227,55 @@
 #
 # merged = merge_sorted_lists(list1, list2)
 # print(merged)
+
+# `````````````````Дз```````````````````````#
+
+# shop = [
+#     ['каретка', 1200], ['шатун', 1000], ['седло', 300],
+#     ['педаль', 100], ['седло', 1500], ['рама', 12000],
+#     ['обод', 2000], ['шатун', 200], ['седло', 2700]
+# ]
+#
+# detail = input('Название детали: ')
+# quantity = int(input('Количество деталей: '))
+#
+# total_price = 0
+#
+# for item, price in shop:
+#     if item == detail:
+#         total_price += price * quantity
+#
+#     print(f'Общая стоимость: {total_price}')
+# else:
+#     print('Такой детали нет в магазине.')
+
+# `````````````````Дз```````````````````````#
+
+# guests = ['Петя', 'Ваня', 'Саша', 'Лиза', 'Катя']
+#
+# while True:
+#     print(f'Сейчас на вечеринке {len(guests)} человек: {guests}')
+#     action = input('Гость пришёл или ушёл? ')
+#
+#     if action == 'Пора спать':
+#         print('Вечеринка закончилась, все легли спать.')
+#         break
+#
+#     elif action == 'пришёл':
+#         name = input('Имя гостя: ')
+#         if len(guests) < 6:
+#             guests.append(name)
+#             print(f'Привет, {name}!')
+#         else:
+#             print(f'Прости, {name}, но мест нет.')
+#
+#     elif action == 'ушёл':
+#         name = input('Имя гостя: ')
+#         if name in guests:
+#             guests.remove(name)
+#             print(f'Пока, {name}!')
+#         else:
+#             print(f'{name} не был на вечеринке.')
+#
+#     else:
+#         print('Некорректный ввод. Введите "пришёл", "ушёл" или "Пора спать".')
