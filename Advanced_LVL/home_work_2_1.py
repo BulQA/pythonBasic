@@ -306,3 +306,39 @@
 #     total_time += duration
 #
 # print(f'Общее время звучания песен — {round(total_time, 2)} минуты')
+
+# `````````````````Дз```````````````````````#
+
+# rols = []
+# legs = []
+#
+# n = int(input('Количество роликов: '))
+# for i in range(1, n + 1):
+#     size = int(input(f'Размер пары {i}: '))
+#     rols.append(size)
+#
+# k = int(input('Количество людей: '))
+# for i in range(1, k + 1):
+#     size = int(input(f'Размер ноги человека {i}: '))
+#     legs.append(size)
+#
+# # сортируем списки
+# rols.sort()
+# legs.sort()
+#
+# count = 0
+# i = 0  # индекс для роликов
+# j = 0  # индекс для людей
+#
+# # пока есть и ролики, и люди
+# while i < n and j < k:
+#     if rols[i] == legs[j]:
+#         count += 1
+#         i += 1
+#         j += 1
+#     elif rols[i] < legs[j]:
+#         i += 1
+#     else:
+#         j += 1
+#
+# print(f'Наибольшее количество людей, которые могут взять ролики: {count}')
