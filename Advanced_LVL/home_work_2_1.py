@@ -322,7 +322,6 @@
 #     size = int(input(f'Размер ноги человека {i}: '))
 #     legs.append(size)
 #
-# # сортируем списки
 # rols.sort()
 # legs.sort()
 #
@@ -330,7 +329,6 @@
 # i = 0  # индекс для роликов
 # j = 0  # индекс для людей
 #
-# # пока есть и ролики, и люди
 # while i < n and j < k:
 #     if rols[i] == legs[j]:
 #         count += 1
@@ -342,3 +340,21 @@
 #         j += 1
 #
 # print(f'Наибольшее количество людей, которые могут взять ролики: {count}')
+
+# `````````````````Дз```````````````````````#
+
+# N = int(input("Количество человек: "))
+# K = int(input("Какое число в считалке? "))
+#
+# people = list(range(1, N+1))
+# index = 0
+#
+# while len(people) > 1:
+#     index = (index + K - 1) % len(people)
+#     print(f"Текущий круг людей: {people}")
+#     print(f"Начало счёта с номера {people[index-1] if index != 0 else people[-1]}")
+#     print(f"Выбывает человек под номером {people[index]}\n")
+#     people.pop(index)
+#
+# print(f"Остался человек под номером {people[0]}")
+
