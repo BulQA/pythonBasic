@@ -358,3 +358,23 @@
 #
 # print(f"Остался человек под номером {people[0]}")
 
+# `````````````````Дз```````````````````````#
+
+# nums = []
+#
+# answer = int(input('Количество чисел: '))
+#
+# for num in range(1, answer + 1):
+#     new_num = int(input(f'Число {num}: '))
+#     nums.append(new_num)
+#
+# print('Последовательность:', nums)
+#
+# for i in range(len(nums)):
+#
+#     if nums[i:] == nums[i:][::-1]:
+#         add = nums[:i]
+#         break
+#
+# print('Нужно приписать чисел:', len(add))
+# print('Сами числа:', add)
