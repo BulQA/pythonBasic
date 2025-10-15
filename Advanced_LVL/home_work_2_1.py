@@ -378,3 +378,14 @@
 #
 # print('Нужно приписать чисел:', len(add))
 # print('Сами числа:', add)
+
+#4.2 List comprehensions
+
+# left = int(input('Левая граница:'))
+# right = int(input('Правая граница:'))
+#
+# squares = [s ** 2 for s in range(left, right)]
+# cubes = [c ** 3 for c in range(left, right)]
+#
+# print(f'Список кубов чисел в диапазоне от {left} до {right}:', cubes)
+# print(f'Список квадратов чисел в диапазоне от {left} до {right}:', squares)
