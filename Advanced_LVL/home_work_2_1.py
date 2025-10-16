@@ -389,3 +389,34 @@
 #
 # print(f'Список кубов чисел в диапазоне от {left} до {right}:', cubes)
 # print(f'Список квадратов чисел в диапазоне от {left} до {right}:', squares)
+
+# `````````````````Дз```````````````````````#
+
+# text = input('Введите строку:')
+# symbol = input('Введите дополнительный символ:')
+# 
+# new_str = [s * 2 for s in(text)]
+# new_symbol = [s * 2 + symbol for s in(text)]
+# 
+# print(new_str)
+# print(new_symbol)
+
+# `````````````````Дз```````````````````````#
+
+# prices = [float(input(f'Цена на товар {i+1}: ')) for i in range(5)]
+# 
+# first_year = float(input('Повышение на первый год: '))
+# second_year = float(input('Повышение на второй год: '))
+# 
+# total0 = 0
+# [total0 := total0 + p for p in prices]
+# 
+# prices1 = [p * (1 + first_year / 100) for p in prices]
+# total1 = 0
+# [total1 := total1 + p for p in prices1]
+# 
+# prices2 = [p * (1 + second_year / 100) for p in prices1]
+# total2 = 0
+# [total2 := total2 + p for p in prices2]
+# 
+# print('Сумма цен за каждый год:', f"{total0:.2f} {total1:.2f} {total2:.2f}")
