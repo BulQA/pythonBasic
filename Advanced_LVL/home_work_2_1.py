@@ -420,3 +420,20 @@
 # [total2 := total2 + p for p in prices2]
 # 
 # print('Сумма цен за каждый год:', f"{total0:.2f} {total1:.2f} {total2:.2f}")
+
+#4.3 List comprehensions с условиями. Модуль random
+
+# a = int(input('Введите число A:'))
+# b = int(input('Введите число B:'))
+#
+# even_num = [num for num in range(a, b + 1) if num % 2 == 0]
+#
+# print(even_num)
+
+# `````````````````Дз```````````````````````#
+
+# original_prices = [1.25, -9.45, 10.22, 3.78, -5.92, 1.16]
+#
+# new_prices = [price if price > 0 else 0 for price in original_prices]
+#
+# print(new_prices)
