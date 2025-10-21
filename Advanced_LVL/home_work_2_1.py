@@ -451,3 +451,16 @@
 # print(f"Урон первого отряда: {team_1}")
 # print(f"Урон второго отряда: {team_2}")
 # print(f"Состояние третьего отряда: {team_3}")
+
+#4.4 Срезы списков
+
+# import random
+#
+# original_prices = [random.randint(-25, 100) for i in range(10)]
+# new_prices = original_prices.copy()  # делаем независимую копию
+#
+# for i in range(len(original_prices)):
+#     if new_prices[i] < 0:
+#         new_prices[i] = 0
+#
+# print("Мы потеряли: ", abs(sum(original_prices) - sum(new_prices)))
