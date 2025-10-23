@@ -464,3 +464,29 @@
 #         new_prices[i] = 0
 #
 # print("Мы потеряли: ", abs(sum(original_prices) - sum(new_prices)))
+
+# import random
+#
+# N = 10
+# numbers = [random.randint(0, 50) for i in range(N)]
+#
+# A = random.randint(0, N - 2)
+# B = random.randint(A + 1, N - 1)
+#
+# print("Исходный список:", numbers)
+# print(f"A = {A}, B = {B}")
+#
+# numbers = numbers[:A] + numbers[B + 1:]
+#
+# print("После удаления:", numbers)
+
+# `````````````````Дз```````````````````````#
+
+# numbers = [48, -10, 9, 38, 17, 50, -5, 43, 46, 12]
+#
+# print(numbers[:5])   # 1. Первые 5 элементов
+# print(numbers[:-2])  # 2. Весь список, кроме последних двух
+# print(numbers[::2])  # 3. Элементы с чётными индексами
+# print(numbers[1::2]) # 4. Элементы с нечётными индексами
+# print(numbers[::-1]) # 5. В обратном порядке
+# print(numbers[::-2]) # 6. Через один в обратном порядке, начиная с последнего
