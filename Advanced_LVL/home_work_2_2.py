@@ -65,3 +65,46 @@
 # new_list = [[i + 1 + j * 4 for j in range(3)] for i in range(4)]
 #
 # print(new_list)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# nice_list = [[[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[10, 11, 12], [13, 14, 15], [16, 17, 18]]]
+#
+# answer = []
+#
+# for i in nice_list:
+#     for j in i:
+#         for k in j:
+# 	        answer.append(k)
+#
+# print('Ответ:',answer )
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# nice_list = [[[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[10, 11, 12], [13, 14, 15], [16, 17, 18]]]
+#
+# answer = [k for i in nice_list for j in i for k in j]
+#
+# print('Ответ:',answer)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# alphabet = [
+#     'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о',
+#     'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'
+# ]
+#
+# message = input('Введите сообщение: ')
+# shift = int(input('Введите сдвиг: '))
+#
+# result = ''
+#
+# for letters in message:
+#     if letters in alphabet:
+#         old_index = alphabet.index(letters)
+#         new_index = (old_index + shift) % len(alphabet)
+#         result += alphabet[new_index]
+#     else:
+#         result += letters  # пробелы, цифры и прочее оставляем как есть
+#
+# print('Зашифрованное сообщение:', result)
