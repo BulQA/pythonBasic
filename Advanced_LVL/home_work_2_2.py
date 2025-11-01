@@ -125,3 +125,19 @@
 # debt = input('Введите долг: ')
 #
 # print(f'{name}! {name}, привет! Как дела, {name}? Где мои {debt} рублей? {name}!')
+
+#5.3 Методы строк: split и join
+
+# user_words = []
+#
+# for i in range(3):
+#     word = input(f'Введите слово №{i+1}: ').lower()
+#     user_words.append(word)
+#
+# text = input('Введите строку из произведения: ').lower()
+#
+# words_in_text = text.split()
+#
+# for w in user_words:
+#     count = words_in_text.count(w)
+#     print(f'Слово "{w}" встречается {count} раз(а).')
