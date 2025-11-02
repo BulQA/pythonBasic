@@ -141,3 +141,37 @@
 # for w in user_words:
 #     count = words_in_text.count(w)
 #     print(f'Слово "{w}" встречается {count} раз(а).')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# text = input('Введите текст: ')
+#
+# fixed_text = ' '.join(text.split())
+#
+# print('Исправленный текст:', fixed_text)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# template = input('Введите шаблон поздравления, в шаблоне можно использовать конструкцию {name} и {age}: ')
+# people = input('Список людей через запятую: ').split(', ')
+# ages_input = input('Возраст людей через пробел: ').split()
+#
+# ages = []
+# for a in ages_input:
+#     ages.append(int(a))
+#
+# # Индекс вручную
+# i = 0
+# for person in people:
+#     age = ages[i]
+#     print(template.format(name=person, age=age))
+#     i += 1
+#
+# # Собираем итоговую строку
+# result = []
+# i = 0
+# for person in people:
+#     result.append(f'{person} {ages[i]}')
+#     i += 1
+#
+# print('\nИменинники:', ', '.join(result))
