@@ -175,3 +175,52 @@
 #     i += 1
 #
 # print('\nИменинники:', ', '.join(result))
+
+#5.4 Методы строк: startswith, endswith, upper, lower
+
+# alphabet = list('абвгдеёжзийклмнопрстуфхцчшщъыьэюя')
+#
+# text = input('Введите текст для шифрования: ').lower()
+# k = int(input('Введите сдвиг (K): '))
+#
+# encrypted = []
+#
+# for ch in text:
+#     if ch in alphabet:
+#         i = alphabet.index(ch)
+#         new_char = alphabet[(i + k) % len(alphabet)]
+#         encrypted.append(new_char)
+#     else:
+#         encrypted.append(ch)
+#
+# print('Зашифрованный текст:', ''.join(encrypted))
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# path = input('Путь к файлу: ')
+# disc = input('На каком диске должен лежать файл: ')
+# ext = input('Требуемое расширение файла: ')
+#
+# if path.startswith(disc) and path.endswith(ext):
+#     print('Путь корректен!')
+# else:
+#     print('Путь некорректен!')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# up_ch = 0
+# low_ch = 0
+#
+# text = input('Введите строку: ')
+#
+# for ch in text:
+#     if ch.isalpha():
+#         if ch.isupper():
+#             up_ch += 1
+#         else:
+#             low_ch += 1
+#
+# if up_ch >= low_ch:
+#     print(text.upper())
+# else:
+#     print(text.lower())
