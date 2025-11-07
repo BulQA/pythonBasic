@@ -224,3 +224,29 @@
 #     print(text.upper())
 # else:
 #     print(text.lower())
+
+#5.7 Практическая работа
+
+# menu = input('Доступное меню:')
+#
+# new_menu = ', '.join(menu.split(';'))
+#
+# print(new_menu)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# text = input('Введите строку: ')
+#
+# words = text.split()
+#
+# longest = ''
+# for word in words:
+#     clean_word = ''
+#     for ch in word:
+#         if ch.isalpha():
+#             clean_word += ch
+#     if len(clean_word) > len(longest):
+#         longest = clean_word
+#
+# print(f'Самое длинное слово: «{longest}».')
+# print(f'Длина этого слова: {len(longest)} символов.')
