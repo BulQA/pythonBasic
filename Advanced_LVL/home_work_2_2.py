@@ -250,3 +250,34 @@
 #
 # print(f'Самое длинное слово: «{longest}».')
 # print(f'Длина этого слова: {len(longest)} символов.')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# ban_list = ['@', '№', '$', '%', '^', '&', '*', '(', ')']
+#
+# file_name = input('Название файла: ')
+#
+# if file_name[0] in ban_list:
+#     print('Ошибка: название начинается с недопустимого символа.')
+# elif not (file_name.endswith('.txt') or file_name.endswith('.docx')):
+#     print('Ошибка: неверное расширение файла. Ожидалось .txt или .docx.')
+# else:
+#     print('Файл назван верно.')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# text = input('Введите строку: ')
+#
+# result = text.title()
+#
+# print('Результат:', result)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# text = input('Введите строку: ')
+#
+# words = text.split()
+# capitalized_words = [word.capitalize() for word in words]
+# result = ' '.join(capitalized_words)
+#
+# print('Результат:', result)
