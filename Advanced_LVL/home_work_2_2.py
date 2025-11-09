@@ -281,3 +281,38 @@
 # result = ' '.join(capitalized_words)
 #
 # print('Результат:', result)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# while True:
+#     password = input('Придумайте пароль:')
+#
+#     if len(password) >= 8 and any(ch.isupper() for ch in password) and sum(ch.isdigit() for ch in password) >= 3:
+#         print('Это надёжный пароль.')
+#         break
+#
+#     else:
+#         print('Пароль ненадёжный. Попробуйте ещё раз.')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# is_secure = False
+#
+# while not is_secure:
+#     password = input('Придумайте пароль: ')
+#     is_secure = True  # предполагаем, что пароль хороший — потом проверим
+#
+#     if len(password) < 8:
+#         print('❌ Пароль слишком короткий (минимум 8 символов).')
+#         is_secure = False
+#
+#     if not any(ch.isupper() for ch in password):
+#         print('❌ Добавьте хотя бы одну заглавную букву.')
+#         is_secure = False
+#
+#     if sum(ch.isdigit() for ch in password) < 3:
+#         print('❌ Нужно минимум три цифры.')
+#         is_secure = False
+#
+#     if is_secure:
+#         print('✅ Это надёжный пароль!')
