@@ -316,3 +316,26 @@
 #
 #     if is_secure:
 #         print('✅ Это надёжный пароль!')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# s = input('Введите строку:')
+#
+# new_s = ''
+# current = ''
+# count = 0
+#
+# for let in s:
+# 	if current == '':
+# 		current = let
+# 		count =1
+# 	elif current == let:
+# 		count += 1
+# 		new_s += current + str(count)
+#
+# 	else:
+# 		new_s += current + str(count)
+#
+# print('Закодированная строка:', new_s)
+
+
