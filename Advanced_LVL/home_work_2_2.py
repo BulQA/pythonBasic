@@ -338,4 +338,24 @@
 #
 # print('Закодированная строка:', new_s)
 
+# +++++++++++++++++++++++++++++++++++++++++++#
 
+# ip = input('Введите IP: ')
+#
+# digits = ip.split('.')
+# is_valid = True
+#
+# if len(digits) != 4:
+#     print('Адрес — это четыре числа, разделённые точками.')
+#     is_valid = False
+# else:
+#     for part in digits:
+#         if not part.isdigit():
+#             print(part, '- это не целое число.')
+#             is_valid = False
+#         elif int(part) > 255:
+#             print(part, 'превышает 255')
+#             is_valid = False
+#
+# if is_valid:
+#     print('IP-адрес корректен.')
