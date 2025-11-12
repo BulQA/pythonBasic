@@ -359,3 +359,19 @@
 #
 # if is_valid:
 #     print('IP-адрес корректен.')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# first_str = input('Первая строка: ')
+# second_str = input('Вторая строка: ')
+#
+# if len(first_str) != len(second_str):
+#     print('Строки разной длины — сдвиг невозможен.')
+# else:
+#     doubled = second_str + second_str
+#
+#     if first_str in doubled:
+#         shift = doubled.index(first_str)
+#         print(f'Первая строка получается из второй со сдвигом {shift}.')
+#     else:
+#         print('Первую строку нельзя получить из второй с помощью циклического сдвига.')
