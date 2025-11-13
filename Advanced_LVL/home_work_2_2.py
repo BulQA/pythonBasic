@@ -375,3 +375,22 @@
 #         print(f'Первая строка получается из второй со сдвигом {shift}.')
 #     else:
 #         print('Первую строку нельзя получить из второй с помощью циклического сдвига.')
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# def counter(text):
+#     uppercase = 0
+#     lowercase = 0
+#     for ch in text:
+#         if ch.isupper():
+#             uppercase += 1
+#         elif ch.islower():
+#             lowercase += 1
+#     return uppercase, lowercase
+#
+#
+# text = input("Введите строку для анализа: ")
+# upper, lower = counter(text)
+#
+# print("Количество заглавных букв:", upper)
+# print("Количество строчных букв:", lower)
