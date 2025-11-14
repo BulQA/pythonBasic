@@ -394,3 +394,11 @@
 #
 # print("Количество заглавных букв:", upper)
 # print("Количество строчных букв:", lower)
+
+#6.1 Словарь: основы
+
+# nums = int(input('Введите целое число:'))
+#
+# square_dict = {digit : digit ** 2 for digit in range(1, nums + 1)}
+#
+# print(square_dict)
