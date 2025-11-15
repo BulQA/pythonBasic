@@ -402,3 +402,22 @@
 # square_dict = {digit : digit ** 2 for digit in range(1, nums + 1)}
 #
 # print(square_dict)
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# info = input('Введите информацию о студенте через пробел\n(имя, фамилия, город, место учёбы, оценки):')
+#
+# student_info = info.split(' ')
+# student_card = dict()
+#
+# student_card['Имя'] = student_info[0]
+# student_card['Фамилия'] = student_info[1]
+# student_card['Город'] = student_info[2]
+# student_card['Место учёбы'] = student_info[3]
+# student_card['Оценки'] = []
+#
+# for i_grade in student_info[4:]:
+#     student_card['Оценки'].append(int(i_grade))
+#
+# for i_info in student_card:
+#     print(i_info, '-', student_card[i_info])
