@@ -421,3 +421,30 @@
 #
 # for i_info in student_card:
 #     print(i_info, '-', student_card[i_info])
+
+# +++++++++++++++++++++++++++++++++++++++++++#
+
+# phone_book = {}
+#
+# while True:
+#     print("Текущие контакты на телефоне:")
+#
+#     if not phone_book:
+#         print("<Пусто>")
+#     else:
+#         for name in phone_book:
+#             print(name, phone_book[name])
+#
+#     contact = input("Введите имя (или 0 для выхода): ")
+#
+#     if contact == "0":
+#         break
+#
+#     if contact in phone_book:
+#         print("Ошибка: такое имя уже существует.\n")
+#         continue
+#
+#     number = input("Введите номер телефона: ")
+#     phone_book[contact] = number
+#     print()
+
