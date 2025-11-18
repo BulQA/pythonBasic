@@ -38,3 +38,14 @@
 #     'pear': 1020.00,
 #     'persimmon': 310.00,
 # }
+#
+# total = sum(incomes.values())
+# min_key = min(incomes, key=incomes.get)
+# min_price = incomes[min_key]
+#
+# print('Общий доход за год составил:', total, 'рублей')
+# print(f'Самый маленький доход у {min_key} — он составляет {min_price} рублей')
+#
+# incomes.pop(min_key)
+#
+# print('Итоговый словарь:', incomes)
