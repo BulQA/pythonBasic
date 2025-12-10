@@ -49,3 +49,17 @@
 # incomes.pop(min_key)
 #
 # print('Итоговый словарь:', incomes)
+
+#6.3 Методы словарей
+
+# text = input("Введите текст: ")
+#
+# histogram = {}
+#
+# for ch in text:
+#     histogram[ch] = histogram.get(ch, 0) + 1
+#
+# for ch in sorted(histogram.keys()):
+#     print(f"{ch} : {histogram[ch]}")
+#
+# print("Максимальная частота:", max(histogram.values()))
