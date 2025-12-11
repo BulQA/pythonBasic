@@ -63,3 +63,33 @@
 #     print(f"{ch} : {histogram[ch]}")
 #
 # print("Максимальная частота:", max(histogram.values()))
+
+#6.3 Вложенные словари и значения по умолчанию в get
+
+# order = {
+#     'apple': 2,
+#     'banana': 3,
+#     'pear': 1,
+#     'watermelon': 10,
+#     'chocolate': 5
+# }
+#
+# incomes = {
+#     'apple': 5600.20,
+#     'orange': 3500.45,
+#     'banana': 5000.00,
+#     'bergamot': 3700.56,
+#     'durian': 5987.23,
+#     'grapefruit': 300.40,
+#     'peach': 10000.50,
+#     'pear': 1020.00,
+#     'persimmon': 310.00,
+# }
+#
+# profit = 0
+#
+# for item, amount in order.items():
+#     price = incomes.get(item, 0)
+#     profit += price * amount
+#
+# print("Итоговая сумма:", profit)
